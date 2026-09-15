@@ -1,26 +1,238 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors — sync with DESIGN.md */
+  --ink: #0e1a16;
+  --ink-soft: #24332c;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --electric: #344ffe;
+  --electric-hover: #2a3fd6;
+  --forest: #1a6b4a;
+  --forest-hover: #14553a;
+  --lime: #81bf5a;
+  --spark: #fe7743;
+  --slate: #47617b;
+  --gold: #eae23e;
+  --border: #d9dfd8;
+  --border-soft: #e8ede6;
+  --muted: #5c6b63;
+  --dim: #8a968f;
+  --danger: #c44040;
+  --warn: #b86e12;
+
+  --radius: 10px;
+  --radius-lg: 14px;
+  --shadow: 0 1px 2px rgba(14, 26, 22, 0.04);
+  --ease: 180ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  --background: var(--bg);
+  --foreground: var(--ink);
+
+  --font-sans: "Plus Jakarta Sans Variable", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Syne Variable", Syne, system-ui, sans-serif;
+  --font-serif: "Nanum Myeongjo", "Times New Roman", serif;
+  --font-mono: "Geist Mono Variable", "Geist Mono", ui-monospace, monospace;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-mist: var(--bg);
+  --color-surface: var(--surface);
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-electric: var(--electric);
+  --color-electric-hover: var(--electric-hover);
+  --color-forest: var(--forest);
+  --color-forest-hover: var(--forest-hover);
+  --color-lime: var(--lime);
+  --color-spark: var(--spark);
+  --color-slate: var(--slate);
+  --color-gold: var(--gold);
+  --color-border: var(--border);
+  --color-border-soft: var(--border-soft);
+  --color-muted: var(--muted);
+  --color-dim: var(--dim);
+  --color-danger: var(--danger);
+  --color-warn: var(--warn);
+  --font-sans: "Plus Jakarta Sans Variable", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Syne Variable", Syne, system-ui, sans-serif;
+  --font-serif: "Nanum Myeongjo", "Times New Roman", serif;
+  --font-mono: "Geist Mono Variable", "Geist Mono", ui-monospace, monospace;
+  --radius-geck: var(--radius);
+  --radius-geck-lg: var(--radius-lg);
+  --shadow-geck: var(--shadow);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--electric) 22%, white);
+    color: var(--ink);
+  }
+
+  a {
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--electric);
+    outline-offset: 3px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
 }
+
+.font-serif {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+.prose-geck {
+  max-width: 42rem;
+  color: #535353;
+}
+
+.prose-geck h2 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #535353;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+.prose-geck h3 {
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #535353;
+}
+
+.prose-geck p {
+  margin-bottom: 1rem;
+  color: #535353;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.prose-geck ul {
+  margin: 0.75rem 0 1rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+  color: #535353;
+  font-weight: 500;
+}
+
+.prose-geck li {
+  margin-bottom: 0.4rem;
+}
+
+.prose-geck a {
+  color: var(--electric);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Hero atmosphere rings — matched to https://dev.geck.ai/ login (2 rings) */
+.hero-rings {
+  /* Bias center upward so discs continue through the sticky header */
+  align-items: flex-start;
+  padding-top: clamp(2rem, 8vh, 5.5rem);
+}
+
+.hero-ring {
+  position: absolute;
+  left: 50%;
+  top: clamp(3.5rem, 12vh, 7rem);
+  border-radius: 9999px;
+  border: 1px solid #ececec;
+  background: #ffffff;
+  transform: translate(-50%, -42%);
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+.hero-ring-outer {
+  width: min(1220px, 94vw);
+  height: min(1220px, 94vw);
+  border-width: 1.37px;
+  box-shadow: 0 16.25px 0 0 rgba(175, 175, 175, 0.08);
+  animation: ringOuterMove 5.8s ease-in-out infinite;
+}
+
+.hero-ring-middle {
+  width: min(940px, 74vw);
+  height: min(940px, 74vw);
+  border-width: 1.46px;
+  box-shadow: 0 17.29px 0 0 rgba(175, 175, 175, 0.08);
+  animation: ringMiddleMove 5s ease-in-out infinite;
+}
+
+@keyframes ringOuterMove {
+  0%,
+  100% {
+    transform: translate(-50%, -42%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, calc(-42% - 12px)) scale(1.028);
+    opacity: 0.95;
+  }
+}
+
+@keyframes ringMiddleMove {
+  0%,
+  100% {
+    transform: translate(-50%, -42%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, calc(-42% + 10px)) scale(1.024);
+    opacity: 0.94;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-ring-outer,
+  .hero-ring-middle {
+    animation: none;
+  }
+}
+
+

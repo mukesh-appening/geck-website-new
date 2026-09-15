@@ -1,0 +1,17 @@
+{
+  "name": "Geck",
+  "description": "Answer Engine Optimization platform for brands that want to win visibility in search and AI answer engines.",
+  "url": "https://geck.ai",
+  "preferredContact": "hello@geck.ai",
+  "pages": [
+    { "path": "/", "purpose": "Product overview and primary value proposition" },
+    { "path": "/about", "purpose": "Company mission and positioning" },
+    { "path": "/faq", "purpose": "Canonical Q&A for AEO definitions and product questions" },
+    { "path": "/contact", "purpose": "Human contact and demo requests" },
+    { "path": "/privacy", "purpose": "Privacy and data handling policy" }
+  ],
+  "sameAs": [
+    "https://twitter.com/geck",
+    "https://www.linkedin.com/company/geck"
+  ]
+}
