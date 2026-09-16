@@ -113,7 +113,7 @@ export function SiteHeader() {
                 </Link>
               </motion.li>
             ))}
-            <motion.li variants={menuItem} className="ml-2 lg:ml-3">
+            <motion.li variants={menuItem} className="relative z-10 ml-2 lg:ml-3">
               <MotionLink
                 href="/contact"
                 variant="pill"

@@ -6,3 +6,5 @@ export { MotionLink, MotionButton } from "@/components/motion/MotionLink";
 export { PageTransition } from "@/components/motion/PageTransition";
 export { Parallax } from "@/components/motion/Parallax";
 export { HoverLift } from "@/components/motion/HoverLift";
+export { SmoothScroll } from "@/components/motion/SmoothScroll";
+export { ScrollProgress } from "@/components/motion/ScrollProgress";

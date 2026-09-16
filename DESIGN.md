@@ -81,18 +81,20 @@ Sticky bar with macOS-style glass on scroll: transparent at page top (hero rings
 
 ## 5. Layout Principles
 
-- **One composition** in the first viewport: GECK brand (logo), one headline composition, one supporting sentence, one CTA (brand insight field), atmosphere rings, partner strip.
+- **One composition** in the first viewport: GECK brand (logo), one headline composition, one supporting sentence, one CTA (brand insight field), atmosphere rings, partner strip. From `sm` up, sticky header + hero lock to one viewport (`h-dvh` / `max-h-dvh`, overflow clipped). On mobile, hero is content-height with smaller type (lead ~1.125rem, accent ~1.5rem, support ~12px), looser rhythm (`gap-8`, `py-14`), and matching smaller type across definition/stats/solutions/impact.
 - **One job per section:** one H2, one short support line, then content.
 - Max content width ~72rem for prose blocks; solutions carousel may bleed wider.
 - Vertical rhythm: section padding `4–6rem`.
-- **Definition copy:** Figma `2802:4723` — justified Plus Jakarta up to `64px`, `leading-none`, `tracking-[-0.02em]`; lead **Bold 700** Electric, body **Medium 500** `#535353`. Stats row max `1213px`, cards ~`372px` with `48px` gaps; values Nanum Myeongjo ExtraBold `96px` centered; labels Plus Jakarta Medium `24px` centered (`tracking-[-0.02em]`). Emphasized card: electric border + `rgba(0,111,253,0.04)` wash + `0 10px` hard shadow.
+- **Definition copy:** Figma `2802:4723` — justified Plus Jakarta up to `64px`, `leading-none`, `tracking-[-0.02em]`; lead **Bold 700** Electric, body **Medium 500** `#535353`. Locked to **4 lines** via hard breaks matching Figma wrap. Stats row max `1213px`, cards ~`372px` with `48px` gaps; values Nanum Myeongjo ExtraBold `96px` centered; labels Plus Jakarta Medium `24px` centered (`tracking-[-0.02em]`). Emphasized card: electric border + `rgba(0,111,253,0.04)` wash + `0 8px` hard shadow. Muted cards match on hover; all cards spring-lift (`y: -6`, slight scale) so border + shadow transform together.
 - **Solution / spotlight media:** Full app screenshots (`public/media/*-full.jpg`) in a fixed `aspect-[21/10]` well with `object-contain` (never `object-cover`) so the UI is not cropped.
 - **Shared page rail:** all marketing sections (header, hero, definition, solutions, impact, spotlight, footer) use the same horizontal container — `max-w-[95.3125rem]` (~1525px per Figma) with matching side padding (`PageRail` / `pageRailClassName`).
 - Mobile: stack CTAs; preserve single H1; keep fact lists scannable.
-- Motion: carousel scroll, CTA hover, form submit — ~180ms ease `cubic-bezier(0.22, 1, 0.36, 1)`.
+- Motion: carousel scroll (solutions infinite loop via triple-cloned track + silent re-center; auto-advance ~4.2s; pauses on hover/focus / reduced-motion), CTA hover, form submit — ~180ms ease `cubic-bezier(0.22, 1, 0.36, 1)`.
 - **Hero rings:** exactly **two** discs (outer/middle), matched to [dev.geck.ai](https://dev.geck.ai/) login — white fill, `#ECECEC` border, hard bottom shadow, `ringOuterMove` / `ringMiddleMove`. Bleed under sticky header; clipped before the next section. Disabled under `prefers-reduced-motion`.
+- **Full stack pill:** entrance pop + soft idle float/tilt; Spark orange dots pulse out of phase. Hover settles toward level. Disabled under `prefers-reduced-motion`.
 - **Interior pages:** Share `PageShell` with home — `PageRail`, chip eyebrow, soft hero rings under sticky header, centered H1 with electric accent, pill CTAs, `#D1D1D1` rounded content panels.
 - **Motion system:** Framer Motion via `src/components/motion/*`. Prefer transform/opacity; respect `prefers-reduced-motion`.
+- **Smooth scroll:** Lenis inertia scrolling site-wide (`SmoothScroll`) + Framer `Reveal` (`fadeUpSoft` blur/slide) on section enter; thin electric `ScrollProgress` bar. Disabled under reduced motion.
 
 ## 6. SEO / AEO Content Patterns
 
@@ -105,9 +107,14 @@ Every indexable page must:
 6. Provide **descriptive alt text** for meaningful images; decorative images `alt=""`.
 7. Prefer citation-ready sentences: short, attributable, non-hype.
 
-## 7. Agent Sync Rule
+## 7. Brand Kit page
+
+Public live reference: `/typography` (`src/app/typography/page.tsx`). Shows typefaces, type scale, color swatches, buttons, inputs, chips, and surface patterns. Keep that page in sync when tokens or component recipes change.
+
+## 8. Agent Sync Rule
 
 When changing visual decisions:
 1. Update **this DESIGN.md** first (or in the same PR).
 2. Mirror tokens in `src/app/globals.css`.
-3. Do not invent one-off hex values in components.
+3. Update `/typography` when recipes change.
+4. Do not invent one-off hex values in components.

@@ -26,11 +26,21 @@ export const easeOutQuick: Transition = {
 };
 
 export const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0, y: 28 },
   visible: {
     opacity: 1,
     y: 0,
     transition: easeOutExpo,
+  },
+};
+
+export const fadeUpSoft: Variants = {
+  hidden: { opacity: 0, y: 40, filter: "blur(6px)" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
@@ -43,7 +53,7 @@ export const fadeIn: Variants = {
 };
 
 export const fadeScale: Variants = {
-  hidden: { opacity: 0, scale: 0.97 },
+  hidden: { opacity: 0, scale: 0.96 },
   visible: {
     opacity: 1,
     scale: 1,
@@ -52,7 +62,16 @@ export const fadeScale: Variants = {
 };
 
 export const slideInLeft: Variants = {
-  hidden: { opacity: 0, x: -16 },
+  hidden: { opacity: 0, x: -24 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: easeOutExpo,
+  },
+};
+
+export const slideInRight: Variants = {
+  hidden: { opacity: 0, x: 24 },
   visible: {
     opacity: 1,
     x: 0,

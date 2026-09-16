@@ -6,17 +6,27 @@ import {
   fadeIn,
   fadeScale,
   fadeUp,
+  fadeUpSoft,
   reducedFade,
   slideInLeft,
+  slideInRight,
 } from "@/components/motion/variants";
 
-type RevealVariant = "fadeUp" | "fadeIn" | "fadeScale" | "slideLeft";
+type RevealVariant =
+  | "fadeUp"
+  | "fadeUpSoft"
+  | "fadeIn"
+  | "fadeScale"
+  | "slideLeft"
+  | "slideRight";
 
 const map = {
   fadeUp,
+  fadeUpSoft,
   fadeIn,
   fadeScale,
   slideLeft: slideInLeft,
+  slideRight: slideInRight,
 } as const;
 
 type RevealProps = {
@@ -31,10 +41,10 @@ type RevealProps = {
 export function Reveal({
   children,
   className,
-  variant = "fadeUp",
+  variant = "fadeUpSoft",
   delay = 0,
   once = true,
-  amount = 0.22,
+  amount = 0.18,
 }: RevealProps) {
   const reduce = useReducedMotion();
   const variants = reduce ? reducedFade : map[variant];
@@ -45,12 +55,12 @@ export function Reveal({
       variants={variants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, amount, margin: "0px 0px -6% 0px" }}
+      viewport={{ once, amount, margin: "0px 0px -8% 0px" }}
       transition={
         reduce
           ? { duration: 0.01 }
           : delay
-            ? { delay, duration: 0.55, ease: [0.22, 1, 0.36, 1] }
+            ? { delay, duration: 0.65, ease: [0.22, 1, 0.36, 1] }
             : undefined
       }
     >

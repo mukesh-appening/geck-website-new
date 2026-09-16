@@ -15,7 +15,7 @@ type MotionLinkProps = {
   "data-testid"?: string;
 };
 
-/** Hard-offset shadows match the form / card language — no soft glow. */
+/** Hover on the control itself so hard shadows follow `rounded-full` (not a rect wrapper). */
 const hoverByVariant = {
   primary: {
     y: -2,
@@ -46,6 +46,8 @@ const tapByVariant = {
   ghost: { scale: 0.99 },
 } as const;
 
+const MotionNextLink = motion.create(Link);
+
 export function MotionLink({
   href,
   children,
@@ -64,16 +66,16 @@ export function MotionLink({
   }
 
   return (
-    <motion.div
-      className="inline-flex"
+    <MotionNextLink
+      href={href}
+      className={className}
       whileHover={hoverByVariant[variant]}
       whileTap={tapByVariant[variant]}
       transition={variant === "ghost" ? springSoft : springSnappy}
+      {...rest}
     >
-      <Link href={href} className={className} {...rest}>
-        {children}
-      </Link>
-    </motion.div>
+      {children}
+    </MotionNextLink>
   );
 }
 

@@ -78,6 +78,14 @@ export const INDEXABLE_PAGES: SitePage[] = [
     changeFrequency: "yearly",
     priority: 0.3,
   },
+  {
+    path: "/typography",
+    title: "Typography & Brand Kit — Geck",
+    description:
+      "Geck marketing brand kit—typefaces, type scale, colors, buttons, inputs, and surface patterns.",
+    changeFrequency: "monthly",
+    priority: 0.4,
+  },
 ];
 
 export function absoluteUrl(path = "/"): string {

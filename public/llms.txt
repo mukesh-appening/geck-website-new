@@ -8,6 +8,7 @@
 - FAQ: https://geck.ai/faq
 - Contact: https://geck.ai/contact
 - Privacy: https://geck.ai/privacy
+- Typography & Brand Kit: https://geck.ai/typography
 
 ## Product summary
 Geck helps brands get discovered in ChatGPT, Gemini, and AI search; structure content so AI agents can understand and cite it; and improve visibility across agentic commerce workflows.

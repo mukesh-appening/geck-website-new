@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { ScrollProgress } from "@/components/motion/ScrollProgress";
+import { SmoothScroll } from "@/components/motion/SmoothScroll";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
@@ -10,6 +12,7 @@ import "@fontsource-variable/geist-mono/wght.css";
 import "@fontsource/nanum-myeongjo/latin-400.css";
 import "@fontsource/nanum-myeongjo/latin-700.css";
 import "@fontsource/nanum-myeongjo/latin-800.css";
+import "lenis/dist/lenis.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -60,12 +63,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE.url,
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/brand/geck-mark.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang={SITE.language} className="h-full antialiased">
       <body className="flex min-h-full flex-col bg-surface font-sans">
+        <SmoothScroll />
+        <ScrollProgress />
         <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
         <a
           href="#main-content"

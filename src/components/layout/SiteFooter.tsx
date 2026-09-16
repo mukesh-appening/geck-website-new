@@ -42,6 +42,7 @@ export function SiteFooter() {
                 { href: "/faq", label: "FAQ" },
                 { href: "/contact", label: "Contact" },
                 { href: "/privacy", label: "Privacy" },
+                { href: "/typography", label: "Brand Kit" },
                 { href: "/llms.txt", label: "llms.txt" },
               ].map((item) => (
                 <li key={item.href}>

@@ -10,8 +10,9 @@ export const HOME = {
   brandInputPrimary: "Enter your Brand.",
   brandInputSecondary: " Get instant insights",
   definitionLead: "Agentic commerce",
+  /** Line breaks match Figma 2802:4723 (4 lines at ~1525px). */
   definitionRest:
-    "is the next evolution of digital shopping where AI agents act autonomously, on behalf of users to research, compare, negotiate, and complete purchases.",
+    "is the next evolution of\ndigital shopping where AI agents act\nautonomously, on behalf of users to\nresearch, compare, negotiate, and complete purchases.",
   stats: [
     {
       value: "25%",

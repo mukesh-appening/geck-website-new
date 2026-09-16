@@ -69,7 +69,9 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    /* Lenis owns smooth scrolling; keep native as fallback when reduced-motion */
+    scroll-behavior: auto;
+    scroll-padding-top: 4.5rem;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow-x: clip;

@@ -28,6 +28,7 @@ function pauseForChar(char: string, charMs: number, atLeadEnd: boolean) {
  * Figma typing reveal:
  * Ghost full text underneath + progressive color paint on top
  * so wrapping stays identical to a normal paragraph.
+ * Newlines in `rest` render as hard line breaks (Figma 4-line lock).
  */
 export function TypeReveal({
   lead,
@@ -54,6 +55,20 @@ export function TypeReveal({
   const leadEnd = lead.length;
   const total = full.length;
   const chars = useMemo(() => Array.from(full), [full]);
+  const ghostNodes = useMemo(() => {
+    const body = rest.split("\n");
+    return (
+      <>
+        <span className="font-bold">{lead}</span>
+        {body.map((line, index) => (
+          <span key={index}>
+            {index === 0 ? ` ${line}` : line}
+            {index < body.length - 1 ? <br /> : null}
+          </span>
+        ))}
+      </>
+    );
+  }, [lead, rest]);
 
   const [count, setCount] = useState(0);
   const [done, setDone] = useState(false);
@@ -97,7 +112,10 @@ export function TypeReveal({
       const atLeadEnd = i === leadEnd;
       // Lead types slightly snappier so the brand lands; body is the reading pace.
       const base = i <= leadEnd ? Math.round(charMs * 0.82) : charMs;
-      const pause = pauseForChar(prev, base, atLeadEnd);
+      const pause =
+        prev === "\n"
+          ? Math.round(charMs * 3.2)
+          : pauseForChar(prev, base, atLeadEnd);
       timer = setTimeout(tick, pause);
     };
 
@@ -116,15 +134,14 @@ export function TypeReveal({
       data-testid="definition-type-reveal"
     >
       <p className="sr-only">
-        {lead} {rest}
+        {lead} {rest.replace(/\n/g, " ")}
       </p>
 
       <p
         aria-hidden
         className="m-0 font-medium leading-[inherit] tracking-[inherit] text-[#D0D0D0]"
       >
-        <span className="font-bold">{lead}</span>
-        {` ${rest}`}
+        {ghostNodes}
       </p>
 
       <p
@@ -132,6 +149,10 @@ export function TypeReveal({
         className="pointer-events-none absolute inset-0 m-0 font-medium leading-[inherit] tracking-[inherit]"
       >
         {chars.map((char, i) => {
+          if (char === "\n") {
+            return <br key={i} />;
+          }
+
           const isLead = i < leadEnd;
           const typed = i < visibleCount;
           const active = !isDone && i === visibleCount - 1 && visibleCount > 0;

@@ -83,7 +83,8 @@ export function organizationJsonLd() {
     email: SITE.email,
     description: SITE.description,
     sameAs: SITE.sameAs,
-    logo: absoluteUrl("/favicon.ico"),
+    logo: absoluteUrl("/brand/geck-icon-512.png"),
+    image: absoluteUrl("/brand/geck-icon-512.png"),
   };
 }
 
