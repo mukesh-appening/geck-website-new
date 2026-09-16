@@ -330,13 +330,13 @@ export function VersionHome() {
       {/* Closing CTA */}
       <section
         id="talk"
-        className="relative overflow-hidden bg-surface"
+        className="relative overflow-x-clip bg-surface"
         aria-labelledby="closing-heading"
       >
-        <PageRail className="relative z-10 py-20 sm:py-24 lg:py-28">
+        <PageRail className="relative z-10 py-20 pb-24 sm:py-24 sm:pb-28 lg:py-28 lg:pb-32">
           <Reveal variant="fadeScale">
             <HoverCard featured>
-              <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[24px] border border-[#D1D1D1] bg-white px-6 py-14 text-center shadow-[0_14px_0_0_rgba(0,0,0,0.07)] sm:px-12 sm:py-16 lg:rounded-[28px] lg:py-20">
+              <div className="group relative mx-auto max-w-4xl overflow-hidden rounded-[24px] border border-[#D1D1D1] bg-white px-6 py-14 text-center shadow-none transition-[border-color,box-shadow] duration-[var(--ease)] hover:border-electric hover:shadow-[0_14px_0_0_rgba(0,0,0,0.07)] sm:px-12 sm:py-16 lg:rounded-[28px] lg:py-20">
                 <div
                   aria-hidden
                   className="pointer-events-none absolute -left-16 -top-16 size-56 rounded-full border border-[#ECECEC] bg-white shadow-[0_10px_0_0_rgba(175,175,175,0.08)]"
@@ -350,10 +350,6 @@ export function VersionHome() {
                     id="closing-heading"
                     className="font-serif text-[1.75rem] font-extrabold leading-tight tracking-tight text-electric sm:text-[clamp(2.25rem,4.5vw,3.25rem)]"
                   >
-                    <span
-                      className="mr-[0.4em] mb-[0.12em] inline-block size-1.5 shrink-0 rounded-full bg-spark align-middle sm:size-[0.4rem]"
-                      aria-hidden
-                    />
                     {C.closing.headline}
                   </h2>
                   <p className="mx-auto mt-5 max-w-2xl text-sm font-medium leading-relaxed tracking-tight text-[#8A8A8A] sm:mt-6 sm:text-lg">

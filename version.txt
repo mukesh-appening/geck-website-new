@@ -1,7 +1,7 @@
 Geck — Website Copy Package (Updated)
 
 1. Homepage Hero Section
-- Eyebrow: AI Transformation
+- Eyebrow: AI Transformation and Growth
 - Headline: Turn AI into working systems and measurable growth.
 - Body: From strategy and engineering to proprietary products, we help you automate work, build native experiences, and scale faster.
 - Primary CTA: Talk to Geck

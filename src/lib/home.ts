@@ -1,15 +1,15 @@
 /** Homepage copy — Website Copy Package hero + classic `/v1` sections. */
 
 export const HOME = {
-  eyebrow: "AI Transformation",
+  eyebrow: "AI Transformation and Growth",
   /** Exact package headline; visual split in HomeHero. */
   headline: "Turn AI into working systems and Measurable Growth.",
   /** Single black line in the hero lockup. */
   headlineLead: "Turn AI into working systems",
-  /** Dark connector line. */
+  /** Second line — dark "and" + electric growth. */
   headlineAnd: "and",
-  /** Display line — M and G capitalized. */
   headlineGrowth: "Measurable Growth.",
+  headlineTail: "and Measurable Growth.",
   support:
     "From strategy and engineering to proprietary products, we help you automate work, build native experiences, and scale faster.",
   brandInputPrimary: "Enter your Brand.",
