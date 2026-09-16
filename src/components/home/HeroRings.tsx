@@ -7,7 +7,7 @@
 export function HeroRings() {
   return (
     <div
-      className="hero-rings pointer-events-none absolute inset-0 z-0 hidden items-center justify-center overflow-hidden md:flex"
+      className="hero-rings pointer-events-none absolute inset-x-0 -top-14 bottom-0 z-[1] hidden items-center justify-center md:flex sm:-top-16"
       aria-hidden
       data-testid="hero-rings"
     >

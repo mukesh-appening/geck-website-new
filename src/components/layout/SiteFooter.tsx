@@ -38,12 +38,13 @@ export function SiteFooter() {
             <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium tracking-tight text-[#535353]">
               {[
                 { href: "/about", label: "About" },
+                { href: "/products", label: "Products" },
                 { href: "/#solutions", label: "Solutions" },
                 { href: "/faq", label: "FAQ" },
                 { href: "/contact", label: "Contact" },
                 { href: "/privacy", label: "Privacy" },
                 { href: "/typography", label: "Brand Kit" },
-                { href: "/v2", label: "Version 2" },
+                { href: "/v1", label: "Classic" },
                 { href: "/llms.txt", label: "llms.txt" },
               ].map((item) => (
                 <li key={item.href}>

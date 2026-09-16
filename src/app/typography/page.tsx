@@ -5,6 +5,7 @@ import {
   PrimaryButton,
   SecondaryButton,
 } from "@/components/layout/PageShell";
+import { SectionEyebrow } from "@/components/layout/SectionEyebrow";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbJsonLd, buildMetadata, webPageJsonLd } from "@/lib/seo";
 
@@ -36,7 +37,7 @@ const fonts = [
   {
     name: "Nanum Myeongjo",
     role: "Accent display",
-    sample: "Agentic Commerce",
+    sample: "Measurable Growth",
     className: "font-serif text-4xl font-extrabold tracking-tight text-electric sm:text-5xl",
     css: "var(--font-serif)",
   },
@@ -55,7 +56,7 @@ const typeScale = [
     detail: "clamp 3–8rem · Nanum ExtraBold",
     className:
       "font-serif text-[clamp(2.5rem,8vw,5rem)] font-extrabold leading-[1.05] tracking-tight text-electric",
-    sample: "Agentic Commerce",
+    sample: "Measurable Growth",
   },
   {
     label: "H2",
@@ -82,7 +83,7 @@ const typeScale = [
     label: "Meta",
     detail: "0.875–1rem · weight 500",
     className: "text-sm font-medium tracking-tight text-[#B7B7B7]",
-    sample: "Works with · Last updated · Section chip",
+    sample: "Work with · Last updated · Section chip",
   },
 ] as const;
 
@@ -381,13 +382,25 @@ export default function TypographyPage() {
                 </p>
               </KitPanel>
               <div className="flex flex-col items-center justify-center gap-4 rounded-[16px] border border-dashed border-[#D1D1D1] p-5 sm:rounded-[20px] sm:p-8">
-                <span className="inline-flex rounded-full border border-[#E3E3E3] px-4 py-2 text-xs font-medium tracking-tight text-[#B7B7B7] sm:px-5 sm:py-3 sm:text-sm">
-                  Section chip
-                </span>
-                <span className="inline-flex items-center gap-2 rounded-full border border-[#E3E3E3] bg-surface px-4 py-2 text-sm font-semibold tracking-tight text-[#535353]">
+                <SectionEyebrow>Section chip</SectionEyebrow>
+                <span className="relative -top-1 inline-flex -rotate-[3deg] items-center gap-2 rounded-full border border-[#ACACAC] bg-surface px-4 py-2 text-sm font-semibold tracking-tight text-[#535353] shadow-[-2px_4px_0px_0px_rgba(0,0,0,0.08)]">
                   <span className="size-1.5 rounded-full bg-spark" aria-hidden />
-                  Full stack
-                  <span className="size-1.5 rounded-full bg-spark" aria-hidden />
+                  AI
+                  <svg
+                    viewBox="0 0 28 12"
+                    className="h-2.5 w-5 text-spark"
+                    fill="none"
+                    aria-hidden
+                  >
+                    <path
+                      d="M1 6h22M17 1.5 25.5 6 17 10.5"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  Systems
                 </span>
               </div>
             </div>

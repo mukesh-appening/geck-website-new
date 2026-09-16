@@ -10,9 +10,9 @@ export const SITE_URL =
 export const SITE = {
   name: "Geck",
   legalName: "Geck",
-  tagline: "The fullstack platform for agentic commerce",
+  tagline: "Turn AI into working systems and measurable growth",
   description:
-    "Geck is the fullstack platform for agentic commerce—helping AI agents find, recommend, and transact with your brand across ChatGPT, Gemini, and AI search.",
+    "From strategy and engineering to proprietary products, we help you automate work, build native experiences, and scale faster.",
   url: SITE_URL,
   locale: "en_US",
   language: "en",
@@ -43,10 +43,25 @@ export type SitePage = {
 export const INDEXABLE_PAGES: SitePage[] = [
   {
     path: "/",
-    title: "Geck — The Fullstack Platform for Agentic Commerce",
+    title: "Geck: Turn AI into working systems and measurable growth",
     description: SITE.description,
     changeFrequency: "weekly",
     priority: 1,
+  },
+  {
+    path: "/v1",
+    title: "Geck: Classic Home (Agentic Commerce)",
+    description: SITE.description,
+    changeFrequency: "monthly",
+    priority: 0.5,
+  },
+  {
+    path: "/products",
+    title: "Geck Products",
+    description:
+      "Software built from real-world execution: Geck Growth, Voice, Vision, DROSS, and Geck Test.",
+    changeFrequency: "weekly",
+    priority: 0.9,
   },
   {
     path: "/about",
@@ -58,7 +73,7 @@ export const INDEXABLE_PAGES: SitePage[] = [
   },
   {
     path: "/faq",
-    title: "FAQ — Geck AEO & SEO",
+    title: "FAQ: Geck AEO & SEO",
     description:
       "Answers to common questions about Answer Engine Optimization, Geck features, and how AI citations work.",
     changeFrequency: "weekly",
@@ -80,19 +95,11 @@ export const INDEXABLE_PAGES: SitePage[] = [
   },
   {
     path: "/typography",
-    title: "Typography & Brand Kit — Geck",
+    title: "Typography & Brand Kit: Geck",
     description:
-      "Geck marketing brand kit—typefaces, type scale, colors, buttons, inputs, and surface patterns.",
+      "Geck marketing brand kit: typefaces, type scale, colors, buttons, inputs, and surface patterns.",
     changeFrequency: "monthly",
     priority: 0.4,
-  },
-  {
-    path: "/v2",
-    title: "Geck — AI Transform & Growth Partner",
-    description:
-      "Turn AI into working systems and measurable growth with Geck products, services, and custom builds.",
-    changeFrequency: "weekly",
-    priority: 0.85,
   },
 ];
 

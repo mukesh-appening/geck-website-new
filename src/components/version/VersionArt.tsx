@@ -29,9 +29,9 @@ export function SectionOrbits({ className = "" }: ArtProps) {
   );
 }
 
-type ProductArtKind = "growth" | "dross";
+type ProductArtKind = "growth" | "dross" | "voice" | "vision" | "test";
 
-/** Animated product well art — Growth (visibility radar) vs DROSS (strategy map). */
+/** Animated product well art — unique silhouette per product family. */
 export function ProductArt({
   kind,
   className = "",
@@ -40,11 +40,12 @@ export function ProductArt({
   className?: string;
 }) {
   const reduce = useReducedMotion();
+  const accent = kind === "growth" || kind === "voice";
 
   return (
     <div
       className={`relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-[14px] transition-transform duration-[var(--ease)] group-hover:scale-[1.02] sm:mb-8 sm:rounded-[16px] ${
-        kind === "growth"
+        accent
           ? "bg-[rgba(0,111,253,0.06)] ring-1 ring-electric/25"
           : "bg-[#F5F5F5] ring-1 ring-[#E8E8E8]"
       } ${className}`}
@@ -52,8 +53,10 @@ export function ProductArt({
     >
       {kind === "growth" ? (
         <GrowthScene reduce={!!reduce} />
-      ) : (
+      ) : kind === "dross" ? (
         <DrossScene reduce={!!reduce} />
+      ) : (
+        <SimpleProductScene kind={kind} reduce={!!reduce} />
       )}
     </div>
   );
@@ -266,6 +269,99 @@ function DrossScene({ reduce }: { reduce: boolean }) {
   );
 }
 
+function SimpleProductScene({
+  kind,
+  reduce,
+}: {
+  kind: "voice" | "vision" | "test";
+  reduce: boolean;
+}) {
+  const label =
+    kind === "voice" ? "Voice" : kind === "vision" ? "Vision" : "Test";
+
+  return (
+    <>
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(52,79,254,0.08)_0%,transparent_50%,rgba(254,119,67,0.06)_100%)]" />
+      <svg viewBox="0 0 480 270" className="absolute inset-0 h-full w-full" fill="none">
+        <rect x="40" y="36" width="400" height="198" rx="16" fill="#FFFFFF" stroke="#E3E3E3" />
+        <text x="60" y="68" fill="#B7B7B7" fontSize="11" fontFamily="system-ui">
+          {label}
+        </text>
+        {kind === "voice" && (
+          <>
+            {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+              <motion.rect
+                key={i}
+                x={90 + i * 42}
+                width="18"
+                rx="9"
+                fill={i === 3 ? "#FE7743" : "#344FFE"}
+                animate={
+                  reduce
+                    ? { y: 170, height: 40 + (i % 3) * 16 }
+                    : {
+                        y: [190 - (36 + i * 8), 190 - (70 + (i % 4) * 14), 190 - (44 + i * 6)],
+                        height: [36 + i * 8, 70 + (i % 4) * 14, 44 + i * 6],
+                      }
+                }
+                transition={{
+                  duration: 2.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: i * 0.12,
+                }}
+              />
+            ))}
+          </>
+        )}
+        {kind === "vision" && (
+          <>
+            <rect x="70" y="90" width="160" height="110" rx="12" fill="#F5F7FF" stroke="#D8D8D8" />
+            <rect x="250" y="90" width="160" height="50" rx="12" fill="#FFF6F2" stroke="#D8D8D8" />
+            <rect x="250" y="150" width="160" height="50" rx="12" fill="#F5F5F5" stroke="#D8D8D8" />
+            <motion.circle
+              cx="150"
+              cy="145"
+              r="18"
+              fill="#344FFE"
+              animate={reduce ? undefined : { scale: [1, 1.12, 1] }}
+              transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <circle cx="330" cy="115" r="8" fill="#FE7743" />
+          </>
+        )}
+        {kind === "test" && (
+          <>
+            {[0, 1, 2, 3].map((i) => (
+              <motion.g
+                key={i}
+                animate={reduce ? undefined : { opacity: [0.45, 1, 0.45] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: i * 0.35,
+                }}
+              >
+                <rect
+                  x="70"
+                  y={88 + i * 36}
+                  width="340"
+                  height="26"
+                  rx="8"
+                  fill="#FAFAFA"
+                  stroke="#E3E3E3"
+                />
+                <circle cx="92" cy={101 + i * 36} r="6" fill={i % 2 === 0 ? "#344FFE" : "#FE7743"} />
+              </motion.g>
+            ))}
+          </>
+        )}
+      </svg>
+    </>
+  );
+}
+
 /** Minimal solution mark — unique per index. */
 export function SolutionMark({ index }: { index: number }) {
   const marks = [
@@ -286,6 +382,11 @@ export function SolutionMark({ index }: { index: number }) {
       <rect x="8" y="10" width="24" height="20" rx="4" stroke="#344FFE" strokeWidth="1.5" />
       <path d="M14 20h12M14 25h8" stroke="#B7B7B7" strokeWidth="1.5" strokeLinecap="round" />
       <circle cx="26" cy="15" r="2" fill="#FE7743" />
+    </svg>,
+    <svg key="e" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden>
+      <circle cx="14" cy="20" r="5" stroke="#344FFE" strokeWidth="1.5" />
+      <rect x="22" y="12" width="10" height="16" rx="2" stroke="#344FFE" strokeWidth="1.5" />
+      <circle cx="27" cy="16" r="1.5" fill="#FE7743" />
     </svg>,
   ];
   return (

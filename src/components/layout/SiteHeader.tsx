@@ -15,7 +15,7 @@ import {
 
 const nav = [
   { href: "/about", label: "About" },
-  { href: "/#solutions", label: "Platform" },
+  { href: "/products", label: "Platform" },
   { href: "/#solutions", label: "Solutions" },
   { href: "/faq", label: "FAQ" },
 ] as const;
@@ -49,24 +49,23 @@ export function SiteHeader() {
 
   return (
     <header
-      className="sticky top-0 z-40"
+      className={`sticky top-0 z-40 ${frosted ? "" : "bg-transparent"}`}
       data-testid="site-header"
       data-frosted={frosted ? "true" : "false"}
     >
-      {/* Full-bleed glass layer — high white opacity so dark sections don't muddy it */}
-      <div
-        aria-hidden
-        className={`pointer-events-none absolute inset-0 transition-[opacity,background-color,backdrop-filter,-webkit-backdrop-filter,border-color,box-shadow] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none ${
-          frosted
-            ? "border-b border-[#E5E5E5] bg-white/92 opacity-100 shadow-[0_1px_0_rgba(255,255,255,0.8)_inset] backdrop-blur-2xl"
-            : "border-b border-transparent bg-transparent opacity-100"
-        }`}
-      />
+      {/* Glass only when scrolled/open — at top, rings must show through */}
+      {frosted ? (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 border-b border-[#E5E5E5] bg-white/92 shadow-[0_1px_0_rgba(255,255,255,0.8)_inset] backdrop-blur-2xl transition-[opacity,background-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
+        />
+      ) : null}
 
       <div
-        className={`${pageRailClassName} relative flex h-14 items-center justify-between gap-4 sm:h-16`}
+        className={`${pageRailClassName} relative z-10 grid h-14 grid-cols-[1fr_auto] items-center gap-3 sm:h-16 md:grid-cols-[1fr_auto_1fr] md:gap-4`}
       >
         <motion.div
+          className="justify-self-start"
           whileHover={reduce ? undefined : { scale: 1.02 }}
           transition={springSnappy}
         >
@@ -91,7 +90,7 @@ export function SiteHeader() {
         <nav
           aria-label="Primary"
           data-testid="primary-nav"
-          className="hidden items-center md:flex"
+          className="hidden justify-self-center md:block"
         >
           <motion.ul
             className="flex items-center gap-1 lg:gap-1.5"
@@ -113,20 +112,21 @@ export function SiteHeader() {
                 </Link>
               </motion.li>
             ))}
-            <motion.li variants={menuItem} className="relative z-10 ml-2 lg:ml-3">
-              <MotionLink
-                href="/contact"
-                variant="pill"
-                className="inline-flex h-10 items-center rounded-full bg-electric px-5 text-sm font-medium tracking-tight text-white transition-colors duration-[var(--ease)] hover:bg-electric-hover lg:h-11"
-                data-testid="header-cta"
-              >
-                Request Access
-              </MotionLink>
-            </motion.li>
           </motion.ul>
         </nav>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="hidden justify-self-end md:block">
+          <MotionLink
+            href="/contact"
+            variant="pill"
+            className="inline-flex h-10 items-center rounded-full bg-electric px-5 text-sm font-medium tracking-tight text-white transition-colors duration-[var(--ease)] hover:bg-electric-hover lg:h-11"
+            data-testid="header-cta"
+          >
+            Request Access
+          </MotionLink>
+        </div>
+
+        <div className="flex items-center justify-self-end gap-2 md:hidden">
           <MotionLink
             href="/contact"
             variant="pill"

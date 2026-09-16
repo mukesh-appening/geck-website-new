@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { pageRailClassName } from "@/components/layout/PageRail";
+import { SectionEyebrow } from "@/components/layout/SectionEyebrow";
 import { HoverLift } from "@/components/motion/HoverLift";
 import { springSnappy, staggerFast, staggerItem } from "@/components/motion/variants";
 import { HOME } from "@/lib/home";
@@ -175,9 +176,7 @@ export function SolutionsCarousel() {
         className={`${pageRailClassName} flex flex-col gap-5 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between sm:gap-6`}
       >
         <div className="min-w-0 flex-1">
-          <p className="inline-flex rounded-full border border-[#E3E3E3] px-3.5 py-1.5 text-[0.6875rem] font-medium tracking-tight text-[#B7B7B7] sm:px-5 sm:py-3 sm:text-sm">
-            Solutions
-          </p>
+          <SectionEyebrow>Solutions</SectionEyebrow>
           <h2
             id="solutions-heading"
             className="mt-3 text-[1.35rem] font-medium leading-snug tracking-tight text-[#535353] sm:mt-3 sm:text-[clamp(1.5rem,4vw,2.75rem)] sm:leading-tight"

@@ -26,7 +26,7 @@ export function BrandInsightForm() {
   return (
     <form
       onSubmit={onSubmit}
-      className="relative mx-auto w-full max-w-xl lg:max-w-2xl"
+      className="relative mx-auto w-full max-w-md sm:max-w-lg"
       data-testid="brand-insight-form"
     >
       <label htmlFor="brand-insight" className="sr-only">
@@ -75,10 +75,20 @@ export function BrandInsightForm() {
             aria-label="Request insights"
             className="flex size-10 items-center justify-center rounded-full bg-electric text-white transition-colors duration-[var(--ease)] hover:bg-electric-hover sm:size-14 md:size-[4.25rem]"
           >
-            <span
-              className="block h-1.5 w-5 rounded-full bg-white sm:h-2.5 sm:w-8 md:h-3 md:w-10"
+            <svg
+              viewBox="0 0 24 24"
+              className="size-4 sm:size-6 md:size-7"
+              fill="none"
               aria-hidden
-            />
+            >
+              <path
+                d="M5 12h12M13 6l6 6-6 6"
+                stroke="currentColor"
+                strokeWidth="2.25"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </MotionButton>
         </div>
       </motion.div>

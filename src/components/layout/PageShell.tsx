@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import { HeroRings } from "@/components/home/HeroRings";
 import { PageRail } from "@/components/layout/PageRail";
+import { SectionEyebrow } from "@/components/layout/SectionEyebrow";
 import { FadeWords } from "@/components/motion/FadeWords";
 import { MotionLink } from "@/components/motion/MotionLink";
 import { Reveal } from "@/components/motion/Reveal";
@@ -33,7 +34,7 @@ export function PageShell({
 }: PageShellProps) {
   return (
     <main
-      className="relative -mt-14 min-w-0 flex-1 overflow-hidden bg-surface pt-14 sm:-mt-16 sm:pt-16"
+      className="relative -mt-14 min-w-0 flex-1 overflow-x-hidden bg-surface pt-14 sm:-mt-16 sm:pt-16"
       data-testid="page-shell"
     >
       <HeroRings />
@@ -41,11 +42,7 @@ export function PageShell({
       <PageRail className="relative z-10 pb-16 pt-10 sm:pb-20 sm:pt-14 lg:pb-24 lg:pt-16">
         <Reveal>
           <header className="mx-auto max-w-3xl text-center sm:max-w-4xl">
-            {eyebrow ? (
-              <p className="inline-flex rounded-full border border-[#E3E3E3] px-4 py-2 text-xs font-medium tracking-tight text-[#B7B7B7] sm:px-5 sm:py-3 sm:text-sm">
-                {eyebrow}
-              </p>
-            ) : null}
+            {eyebrow ? <SectionEyebrow>{eyebrow}</SectionEyebrow> : null}
             <div className={eyebrow ? "mt-4 sm:mt-5" : undefined}>
               {titleAccent ? (
                 <h1

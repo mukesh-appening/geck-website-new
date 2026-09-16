@@ -1,18 +1,10 @@
-/** Homepage v2 copy — sourced from version.txt (UX-optimized marketing draft). */
+/** Homepage body copy — exact Website Copy Package (Updated).
+ * Hero lives in `HomeHero` + `HOME` (package eyebrow, headline, CTAs).
+ */
 
 export const VERSION_HOME = {
-  eyebrow: "AI Transform & Growth Partner",
-  headline: "Turn AI into working systems and measurable growth.",
-  body: "Skip the endless strategy decks. We combine elite engineering, marketing systems, and proprietary AI products to help you automate work, build native experiences, and win in AI-driven commerce.",
-  primaryCta: { label: "Talk to Geck", href: "/contact" },
-  secondaryCta: { label: "Explore our products", href: "/v2#products" },
-  microcopy:
-    "Looking for software only? Spin up Geck Growth or map your GTM with DROSS.",
-
   engage: {
     headline: "One operating model. Three ways to plug in.",
-    support:
-      "Move at your own speed—whether you need self-serve software, expert co-pilots, or custom infrastructure.",
     modes: [
       {
         id: "use-it",
@@ -20,7 +12,7 @@ export const VERSION_HOME = {
         subtitle: "Self-Serve",
         lead: "Run your growth on Geck.",
         body: "Monitor your brand's AI footprint, automate multi-channel content pipelines, or build your GTM strategy independently.",
-        cta: { label: "Explore products", href: "/v2#products" },
+        cta: { label: "Explore products", href: "/products" },
       },
       {
         id: "do-it",
@@ -28,14 +20,14 @@ export const VERSION_HOME = {
         subtitle: "Partnership",
         lead: "Add builders to your team.",
         body: "Embed our strategists, engineers, and growth operators to overhaul legacy workflows and execute high-stakes launches.",
-        cta: { label: "Explore services", href: "/v2#services" },
+        cta: { label: "Explore services", href: "/#services" },
       },
       {
         id: "build-it",
         title: "Build it with us",
-        subtitle: "Custom",
-        lead: "Build what doesn’t exist.",
-        body: "We combine reusable Geck components with custom engineering to spin up proprietary workflows, internal apps, and agentic systems.",
+        subtitle: "Custom Engineering",
+        lead: "",
+        body: "We custom build applications, workflows, and agentic systems around your exact data, tech stack, and business logic.",
         cta: { label: "Build with us", href: "/contact" },
       },
     ],
@@ -64,32 +56,75 @@ export const VERSION_HOME = {
         title: "Agentic Commerce",
         body: "The next wave of buyers won't be human. Make your catalog, checkout flow, and support stack fully discoverable and transactable by AI agents.",
       },
+      {
+        id: "ai-voice-video",
+        title: "AI Voice & Video Agents",
+        body: "Deploy custom voice and video systems for customer support, transcription, and real-time interactions built natively into your workflows.",
+      },
     ],
   },
 
   products: {
-    headline: "Software built from the trenches.",
+    eyebrow: "GECK PRODUCTS",
+    headline: "Software built from real-world execution.",
     support:
-      "We turn the repeatable parts of our transformation work into products so your team can move fast without reinventing the wheel.",
+      "We turn hard-earned operational insights into production-ready software—so your team can move fast without starting from a blank page.",
+    cta: { label: "Explore the products", href: "/products" },
     items: [
       {
         id: "geck-growth",
-        name: "Geck Growth Platform",
+        name: "Growth",
+        note: "Visibility & Content",
         tagline: "See what AI sees. Fix what it misses. Create what comes next.",
         overview:
-          "Track your brand across AI answer engines and search. Turn those insights into on-brand content and multi-channel distribution from one workspace.",
-        primary: { label: "Explore Geck Growth", href: "/contact" },
+          "Track your brand across AI answer engines and search, then turn visibility gaps into multi-channel content from one workspace.",
+        art: "growth" as const,
+        primary: { label: "Explore Growth", href: "/contact" },
         secondary: { label: "Start free", href: "/contact" },
       },
       {
+        id: "geck-voice",
+        name: "Voice",
+        note: "Voice",
+        tagline: "Conversational AI built for production.",
+        overview:
+          "Deploy advanced voice and transcription systems designed to handle real-time customer workflows and internal communication.",
+        art: "voice" as const,
+        primary: { label: "Explore Voice", href: "/contact" },
+        secondary: { label: "Talk to us", href: "/contact" },
+      },
+      {
+        id: "geck-vision",
+        name: "Vision",
+        note: "Image & Video Generation",
+        tagline: "Generate rich media from your core context.",
+        overview:
+          "Produce on-brand images and explanatory video assets natively from your approved product materials and briefs.",
+        art: "vision" as const,
+        primary: { label: "Explore Vision", href: "/contact" },
+        secondary: { label: "Talk to us", href: "/contact" },
+      },
+      {
         id: "dross",
-        name: "DROSS",
+        name: "Dross",
+        note: "GTM Strategy Engine",
         tagline: "Build a GTM strategy your team can defend.",
         overview:
-          "Take a product idea and turn it into a rigorous, evidence-backed strategy covering positioning, messaging, growth loops, and prioritized playbooks.",
-        note: "GTM Strategy Engine",
-        primary: { label: "Explore DROSS", href: "/contact" },
+          "Take a product idea and turn it into a rigorous, evidence-backed strategy covering positioning, messaging, and prioritized playbooks.",
+        art: "dross" as const,
+        primary: { label: "Explore Dross", href: "/contact" },
         secondary: { label: "Build my strategy", href: "/contact" },
+      },
+      {
+        id: "geck-test",
+        name: "Test",
+        note: "AI-Enabled Testing",
+        tagline: "Intelligent software testing powered by AI.",
+        overview:
+          "Automate and scale software testing infrastructure using autonomous agents designed to navigate and validate digital system",
+        art: "test" as const,
+        primary: { label: "Explore Test", href: "/contact" },
+        secondary: { label: "Talk to us", href: "/contact" },
       },
     ],
   },
@@ -146,7 +181,7 @@ export const VERSION_HOME = {
   },
 
   closing: {
-    headline: "What are we building or breaking next?",
+    headline: "How might we help",
     body: "Tell us what you're trying to launch, automate, or scale. We’ll help you figure out if you need a software product, a focused sprint, or a custom build.",
     primaryCta: { label: "Talk to Geck", href: "/contact" },
     secondaryCta: { label: "Start free", href: "/contact" },

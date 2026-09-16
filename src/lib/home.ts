@@ -1,14 +1,20 @@
-/** Homepage copy sourced from Figma frame 2721:1462 (geck — Project 42). */
+/** Homepage copy — Website Copy Package hero + classic `/v1` sections. */
 
 export const HOME = {
-  headlineLead: "The",
-  headlinePill: "Full stack",
-  headlineMid: "Platform for",
-  headlineAccent: "Agentic Commerce",
+  eyebrow: "AI TRANSFORM & GROWTH PARTNER",
+  /** Exact package headline; visual split in HomeHero. */
+  headline: "Turn AI into working systems and measurable growth.",
+  headlineLead: "Turn AI into",
+  headlineSystems: "working systems",
+  headlineTail: "and measurable growth.",
   support:
-    "Help AI agents find, recommend, and transact with your brand",
+    "From strategy and engineering to proprietary products, we help you automate work, build native experiences, and scale faster.",
+  microcopy:
+    "Looking for software only? Spin up Geck Growth or map your GTM with DROSS.",
   brandInputPrimary: "Enter your Brand.",
   brandInputSecondary: " Get instant insights",
+  primaryCta: { label: "Talk to Geck", href: "/contact" },
+  secondaryCta: { label: "Explore our products", href: "/products" },
   definitionLead: "Agentic commerce",
   /** Line breaks match Figma 2802:4723 (4 lines at ~1525px). */
   definitionRest:
@@ -41,25 +47,29 @@ export const HOME = {
       title: "AI Visibility",
       body: "Get discovered in ChatGPT, Gemini, and AI search.",
       image: "/media/solution-ai-visibility-full.jpg",
-      imageAlt: "Geck Brand Visibility dashboard for Ridezum with AI visibility score and platform breakdown",
+      imageAlt:
+        "Geck Brand Visibility dashboard for Ridezum with AI visibility score and platform breakdown",
     },
     {
       title: "Agent Optimization",
       body: "Structure your content for AI agents to understand and cite.",
       image: "/media/solution-agent-optimization-full.jpg",
-      imageAlt: "Geck Agent test flows for Ridezum showing passed demo CTA execution steps",
+      imageAlt:
+        "Geck Agent test flows for Ridezum showing passed demo CTA execution steps",
     },
     {
       title: "Search Optimization",
       body: "Monitor sentiment, mentions, and brand perception.",
       image: "/media/solution-search-optimization-full.jpg",
-      imageAlt: "Geck Site Audit dashboard for Ridezum with score trends and audit history",
+      imageAlt:
+        "Geck Site Audit dashboard for Ridezum with score trends and audit history",
     },
     {
       title: "Online Reputation",
       body: "Monitor sentiment, mentions, and brand perception.",
       image: "/media/solution-online-reputation-full.jpg",
-      imageAlt: "Geck ORM reputation dashboard for Ridezum with sentiment and source channels",
+      imageAlt:
+        "Geck ORM reputation dashboard for Ridezum with sentiment and source channels",
     },
   ],
   testimonial: {
@@ -76,6 +86,7 @@ export const HOME = {
     title: "Agent Optimization",
     body: "Structure your content for AI agents to understand and cite.",
     image: "/media/spotlight-agent-optimization-full.jpg",
-    imageAlt: "Geck Agent Optimization workspace for Ridezum with passed flow execution",
+    imageAlt:
+      "Geck Agent Optimization workspace for Ridezum with passed flow execution",
   },
 } as const;

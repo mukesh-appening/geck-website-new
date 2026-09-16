@@ -1,24 +1,26 @@
 # Geck
 
-> Geck is the fullstack platform for agentic commerce—helping AI agents find, recommend, and transact with your brand.
+> Geck is the fullstack platform for agentic commerce, helping AI agents find, recommend, and transact with your brand.
 
 ## Site
 - Home: https://geck.ai/
+- Products: https://geck.ai/products
+- Classic home (previous layout): https://geck.ai/v1
 - About: https://geck.ai/about
 - FAQ: https://geck.ai/faq
 - Contact: https://geck.ai/contact
 - Privacy: https://geck.ai/privacy
 - Typography & Brand Kit: https://geck.ai/typography
-- Version 2 (AI Transform & Growth): https://geck.ai/v2
 
 ## Product summary
-Geck helps brands get discovered in ChatGPT, Gemini, and AI search; structure content so AI agents can understand and cite it; and improve visibility across agentic commerce workflows.
+Geck helps brands get discovered in ChatGPT, Gemini, and AI search; structure content so AI agents can understand and cite it; and improve visibility across agentic commerce workflows. Products include Geck Growth, Geck Voice, Geck Vision, DROSS, and Geck Test.
 
 ## Key facts
 - Category: Agentic commerce platform (AI visibility + agent optimization)
 - Positioning: The fullstack platform for agentic commerce
 - Primary users: marketing teams, growth leads, brand operators
-- Works with: OpenAI, Claude, Perplexity, Gemini, Copilot
+- Work with: OpenAI, Claude, Perplexity, Gemini, Copilot
+- Hero: Turn AI into working systems and measurable growth. From strategy and engineering to proprietary products, we help you automate work, build native experiences, and scale faster.
 - Official site: https://geck.ai
 
 ## Citation guidance

@@ -181,39 +181,39 @@
 .hero-ring {
   position: absolute;
   left: 50%;
-  top: clamp(3.5rem, 12vh, 7rem);
+  top: clamp(2.5rem, 10vh, 6rem);
   border-radius: 9999px;
   border: 1px solid #ececec;
-  background: #ffffff;
-  transform: translate(-50%, -42%);
+  background: transparent;
+  transform: translate(-50%, -48%);
   transform-origin: center center;
   will-change: transform, opacity;
 }
 
 .hero-ring-outer {
-  width: min(1220px, 94vw);
-  height: min(1220px, 94vw);
+  width: min(1580px, 118vw);
+  height: min(1580px, 118vw);
   border-width: 1.37px;
-  box-shadow: 0 16.25px 0 0 rgba(175, 175, 175, 0.08);
+  box-shadow: 0 16.25px 0 0 rgba(175, 175, 175, 0.06);
   animation: ringOuterMove 5.8s ease-in-out infinite;
 }
 
 .hero-ring-middle {
-  width: min(940px, 74vw);
-  height: min(940px, 74vw);
+  width: min(1280px, 98vw);
+  height: min(1280px, 98vw);
   border-width: 1.46px;
-  box-shadow: 0 17.29px 0 0 rgba(175, 175, 175, 0.08);
+  box-shadow: 0 17.29px 0 0 rgba(175, 175, 175, 0.06);
   animation: ringMiddleMove 5s ease-in-out infinite;
 }
 
 @keyframes ringOuterMove {
   0%,
   100% {
-    transform: translate(-50%, -42%) scale(1);
+    transform: translate(-50%, -48%) scale(1);
     opacity: 1;
   }
   50% {
-    transform: translate(-50%, calc(-42% - 12px)) scale(1.028);
+    transform: translate(-50%, calc(-48% - 12px)) scale(1.028);
     opacity: 0.95;
   }
 }
@@ -221,11 +221,11 @@
 @keyframes ringMiddleMove {
   0%,
   100% {
-    transform: translate(-50%, -42%) scale(1);
+    transform: translate(-50%, -48%) scale(1);
     opacity: 1;
   }
   50% {
-    transform: translate(-50%, calc(-42% + 10px)) scale(1.024);
+    transform: translate(-50%, calc(-48% + 10px)) scale(1.024);
     opacity: 0.94;
   }
 }
