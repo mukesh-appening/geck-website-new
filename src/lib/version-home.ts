@@ -155,27 +155,27 @@ export const VERSION_HOME = {
   },
 
   loop: {
-    headline: "From strategy to execution to feedback loop.",
+    headline: "Built to Adapt: The 5D Framework",
     steps: [
       {
-        title: "Decide",
-        body: "Ground your moves in real market signals (powered by DROSS).",
+        title: "Detect",
+        body: "Ground decisions in real market signals",
       },
       {
-        title: "Build",
-        body: "Architect the workflows or content systems required to execute.",
+        title: "Design",
+        body: "Architect the systems to execute",
       },
       {
-        title: "Reach",
-        body: "Push your message across human channels and AI discovery engines (powered by Geck Growth).",
+        title: "Deploy",
+        body: "Push your message across channels and discovery engines",
       },
       {
-        title: "Measure",
-        body: "Track movement in visibility, behavior, and revenue.",
+        title: "Determine",
+        body: "Track visibility, behavior, and revenue",
       },
       {
-        title: "Improve",
-        body: "Feed real world performance data straight back into your next decision.",
+        title: "Direct",
+        body: "Feed results back into your next decision",
       },
     ],
   },

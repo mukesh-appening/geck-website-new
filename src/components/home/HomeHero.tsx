@@ -68,7 +68,7 @@ export function HomeHero({
               className="mt-2 flex flex-wrap items-baseline justify-center gap-x-[0.35em] whitespace-nowrap font-serif text-[clamp(1.9rem,5.6vw,4rem)] font-extrabold leading-[1.1] tracking-[-0.02em] sm:mt-3"
               variants={reduce ? undefined : staggerItem}
             >
-              <span className="text-[#535353]">{HOME.headlineAnd}</span>
+              <span className="text-electric">{HOME.headlineAnd}</span>
               <FadeWords
                 as="span"
                 text={HOME.headlineGrowth}

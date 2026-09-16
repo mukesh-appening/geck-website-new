@@ -293,9 +293,14 @@ export function VersionHome() {
         <PageRail className="relative z-10 py-16 sm:py-20 lg:py-24">
           <Reveal variant="fadeUpSoft" className="mx-auto max-w-3xl text-center">
             <SectionEyebrow>How we work</SectionEyebrow>
-            <SectionHeading id="loop-heading" className="mt-5">
-              From strategy to execution to{" "}
-              <span className="font-semibold text-electric">feedback loop.</span>
+            <SectionHeading
+              id="loop-heading"
+              className="mt-5 flex flex-col items-center gap-1 sm:gap-1.5"
+            >
+              <span>Built to Adapt:</span>
+              <span className="font-semibold text-electric">
+                The 5D Framework
+              </span>
             </SectionHeading>
           </Reveal>
 

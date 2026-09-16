@@ -3,13 +3,13 @@
 export const HOME = {
   eyebrow: "AI Transformation and Growth",
   /** Exact package headline; visual split in HomeHero. */
-  headline: "Turn AI into working systems and Measurable Growth.",
+  headline: "Turn AI into working systems & Measurable Growth.",
   /** Single black line in the hero lockup. */
   headlineLead: "Turn AI into working systems",
   /** Second line — dark "and" + electric growth. */
-  headlineAnd: "and",
+  headlineAnd: "&",
   headlineGrowth: "Measurable Growth.",
-  headlineTail: "and Measurable Growth.",
+  headlineTail: "& Measurable Growth.",
   support:
     "From strategy and engineering to proprietary products, we help you automate work, build native experiences, and scale faster.",
   brandInputPrimary: "Enter your Brand.",
