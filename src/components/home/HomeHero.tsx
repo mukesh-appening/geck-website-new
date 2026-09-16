@@ -23,8 +23,8 @@ type HomeHeroProps = {
 };
 
 /**
- * Package hero: eyebrow + headline + support + CTA pair + microcopy.
- * Rings atmosphere; no brand input or partner strip.
+ * Package hero: eyebrow + headline + support + CTA pair.
+ * Rings atmosphere; no brand input, microcopy, or partner strip.
  */
 export function HomeHero({
   headingId = "hero-heading",
@@ -58,24 +58,24 @@ export function HomeHero({
             className="mt-7 flex w-full max-w-5xl flex-col items-center sm:mt-9"
           >
             <motion.span
-              className="text-[0.9375rem] font-semibold tracking-[-0.02em] text-[#535353] sm:text-[clamp(1.125rem,2.4vw,1.5rem)]"
+              className="whitespace-nowrap font-serif text-[clamp(1.05rem,4.2vw,3.25rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-ink sm:text-[clamp(1.65rem,4.8vw,3.75rem)]"
               variants={reduce ? undefined : staggerItem}
             >
               {HOME.headlineLead}
             </motion.span>
 
             <motion.span
-              className="mt-2 font-serif text-[clamp(1.85rem,6.2vw,4.25rem)] font-extrabold leading-[1.05] tracking-[-0.03em] text-electric sm:mt-3"
+              className="mt-2 text-[0.9375rem] font-semibold tracking-[-0.02em] text-[#535353] sm:mt-3 sm:text-[clamp(1.125rem,2.4vw,1.5rem)]"
               variants={reduce ? undefined : staggerItem}
             >
-              {HOME.headlineSystems}
+              {HOME.headlineAnd}
             </motion.span>
 
             <FadeWords
               as="span"
-              text={HOME.headlineTail}
+              text={HOME.headlineGrowth}
               delay={0.16}
-              className="mt-1 max-w-[18ch] font-serif text-[clamp(1.85rem,6.2vw,4.25rem)] font-extrabold leading-[1.05] tracking-[-0.03em] text-electric sm:mt-1.5 sm:max-w-none"
+              className="mt-1 font-serif text-[clamp(1.85rem,6.2vw,4.25rem)] font-extrabold leading-[1.05] tracking-[-0.03em] text-electric sm:mt-1.5"
             />
           </h1>
 
@@ -88,26 +88,17 @@ export function HomeHero({
         </motion.div>
 
         <motion.div
-          className="flex w-full flex-col items-center gap-4 sm:gap-5"
+          className="flex flex-wrap items-center justify-center gap-3"
           initial={reduce ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.28, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <PrimaryButton href={HOME.primaryCta.href}>
-              {HOME.primaryCta.label}
-            </PrimaryButton>
-            <SecondaryButton href={HOME.secondaryCta.href}>
-              {HOME.secondaryCta.label}
-            </SecondaryButton>
-          </div>
-          <p className="flex max-w-md items-center justify-center gap-2 px-2 text-center text-[0.6875rem] font-medium tracking-tight text-[#B7B7B7] sm:max-w-lg sm:text-sm">
-            <span
-              className="size-1.5 shrink-0 rounded-full bg-spark"
-              aria-hidden
-            />
-            {HOME.microcopy}
-          </p>
+          <PrimaryButton href={HOME.primaryCta.href}>
+            {HOME.primaryCta.label}
+          </PrimaryButton>
+          <SecondaryButton href={HOME.secondaryCta.href}>
+            {HOME.secondaryCta.label}
+          </SecondaryButton>
         </motion.div>
       </PageRail>
     </section>

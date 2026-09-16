@@ -1,7 +1,7 @@
 Geck — Website Copy Package (Updated)
 
 1. Homepage Hero Section
-- Eyebrow: AI TRANSFORM & GROWTH PARTNER
+- Eyebrow: AI Transformation
 - Headline: Turn AI into working systems and measurable growth.
 - Body: From strategy and engineering to proprietary products, we help you automate work, build native experiences, and scale faster.
 - Primary CTA: Talk to Geck
@@ -11,39 +11,39 @@ Geck — Website Copy Package (Updated)
 2. Homepage: Three Ways to Engage (Card 3 Update)
 - Headline: One operating model. Three ways to plug in.
 - Cards:
-1. Use it (Self-Serve): Run your growth on Geck. Monitor your brand's AI footprint, automate multi-channel content pipelines, or build your GTM strategy independently. (Explore products)
-2. Do it with us (Partnership): Add builders to your team. Embed our strategists, engineers, and growth operators to overhaul legacy workflows and execute high-stakes launches. (Explore services)
+1. Use it (Self Serve): Run your growth on Geck. Monitor your brand's AI footprint, automate multi channel content pipelines, or build your GTM strategy independently. (Explore products)
+2. Do it with us (Partnership): Add builders to your team. Embed our strategists, engineers, and growth operators to overhaul legacy workflows and execute high stakes launches. (Explore services)
 3. Build it with us (Custom Engineering): We custom build applications, workflows, and agentic systems around your exact data, tech stack, and business logic. (Build with us)
 
 3. Homepage Solutions / Outcomes (5-Card Update)
 - Headline: What problem are we solving next?
 - Cards:
-- AI Transformation: Move past pilot purgatory. Identify high-leverage workflows, build reliable architecture, and actually get your teams using AI where it counts.
-- AI Marketing & Growth: Stop drowning in generic copy. Modernize research, positioning, multi-channel distribution, and performance tracking into a single loop.
-- AI Search & Visibility: Buyers aren't just searching—they're asking LLMs for recommendations. Discover how AI sees your brand, fix the gaps, and become the default choice.
+- AI Transformation: Move past pilot purgatory. Identify high leverage workflows, build reliable architecture, and actually get your teams using AI where it counts.
+- AI Marketing & Growth: Stop drowning in generic copy. Modernize research, positioning, multi channel distribution, and performance tracking into a single loop.
+- AI Search & Visibility: Buyers aren't just searching, they're asking LLMs for recommendations. Discover how AI sees your brand, fix the gaps, and become the default choice.
 - Agentic Commerce: The next wave of buyers won't be human. Make your catalog, checkout flow, and support stack fully discoverable and transactable by AI agents.
-- AI Voice & Video Agents: Deploy custom voice and video systems for customer support, transcription, and real-time interactions built natively into your workflows.
+- AI Voice & Video Agents: Deploy custom voice and video systems for customer support, transcription, and real time interactions built natively into your workflows.
 
 4. Products Overview Page (/products)
 Hero
 - Eyebrow: GECK PRODUCTS
-- Headline: Software built from real-world execution.
-- Body: We turn hard-earned operational insights into production-ready software—so your team can move fast without starting from a blank page.
+- Headline: Software built from real world execution.
+- Body: We turn hard earned operational insights into production ready software, so your team can move fast without starting from a blank page.
 - Primary CTA: Explore the products
 
 Expanded 5-Product Lineup
 1. Geck Growth (Visibility & Content)
 - Tagline: See what AI sees. Fix what it misses. Create what comes next.
-- Overview: Track your brand across AI answer engines and search, then turn visibility gaps into multi-channel content from one workspace.
+- Overview: Track your brand across AI answer engines and search, then turn visibility gaps into multi channel content from one workspace.
 2. Geck Voice
 - Tagline: Conversational AI built for production.
-- Overview: Deploy advanced voice and transcription systems designed to handle real-time customer workflows and internal communication.
+- Overview: Deploy advanced voice and transcription systems designed to handle real time customer workflows and internal communication.
 3. Geck Vision (Image & Video Generation)
 - Tagline: Generate rich media from your core context.
-- Overview: Produce on-brand images and explanatory video assets natively from your approved product materials and briefs.
+- Overview: Produce on brand images and explanatory video assets natively from your approved product materials and briefs.
 4. DROSS (GTM Strategy Engine)
 - Tagline: Build a GTM strategy your team can defend.
-- Overview: Take a product idea and turn it into a rigorous, evidence-backed strategy covering positioning, messaging, and prioritized playbooks.
-5. Geck Test (AI-Enabled Testing)
+- Overview: Take a product idea and turn it into a rigorous, evidence backed strategy covering positioning, messaging, and prioritized playbooks.
+5. Geck Test (AI Enabled Testing)
 - Tagline: Intelligent software testing powered by AI.
 - Overview: Automate and scale software testing infrastructure using autonomous agents designed to navigate and validate digital system

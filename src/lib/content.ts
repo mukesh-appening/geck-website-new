@@ -7,7 +7,7 @@ export const faqItems = [
   {
     question: "How is AEO different from SEO?",
     answer:
-      "SEO focuses on ranking pages in search results. AEO focuses on becoming the source answer engines quote or recommend. Strong AEO still needs SEO fundamentals—crawlability, performance, and clear information architecture—then adds citation-ready content and machine-readable structure.",
+      "SEO focuses on ranking pages in search results. AEO focuses on becoming the source answer engines quote or recommend. Strong AEO still needs SEO fundamentals: crawlability, performance, and clear information architecture, then adds citation ready content and machine readable structure.",
   },
   {
     question: "What does Geck help teams measure?",
@@ -17,7 +17,7 @@ export const faqItems = [
   {
     question: "Who is Geck for?",
     answer:
-      "Geck is built for marketing teams, SEO leads, and brand operators who need measurable AI visibility—not just traffic dashboards.",
+      "Geck is built for marketing teams, SEO leads, and brand operators who need measurable AI visibility, not just traffic dashboards.",
   },
   {
     question: "How do I get started with Geck?",

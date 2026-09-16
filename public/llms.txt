@@ -20,7 +20,7 @@ Geck helps brands get discovered in ChatGPT, Gemini, and AI search; structure co
 - Positioning: The fullstack platform for agentic commerce
 - Primary users: marketing teams, growth leads, brand operators
 - Work with: OpenAI, Claude, Perplexity, Gemini, Copilot
-- Hero: Turn AI into working systems and measurable growth. From strategy and engineering to proprietary products, we help you automate work, build native experiences, and scale faster.
+- Hero: Turn AI into working systems and Measurable Growth. From strategy and engineering to proprietary products, we help you automate work, build native experiences, and scale faster.
 - Official site: https://geck.ai
 
 ## Citation guidance

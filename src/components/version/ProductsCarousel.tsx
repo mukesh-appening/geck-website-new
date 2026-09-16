@@ -66,7 +66,8 @@ export function ProductsCarousel() {
       if (!el) return;
       const slide = el.querySelector<HTMLElement>("[data-product-slide]");
       if (!slide) return;
-      const styles = window.getComputedStyle(el);
+      const track = slide.parentElement;
+      const styles = window.getComputedStyle(track ?? el);
       const gap = Number.parseFloat(styles.columnGap || styles.gap || "24") || 24;
       const step = slide.getBoundingClientRect().width + gap;
       el.scrollBy({ left: dir * step, behavior: "smooth" });
@@ -134,56 +135,53 @@ export function ProductsCarousel() {
         </motion.button>
       </div>
 
+      {/* Extra inset so hover lift + hard shadow are not clipped by the scrollport. */}
       <div
         ref={scrollerRef}
-        className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-6 [&::-webkit-scrollbar]:hidden"
+        className="-mx-1 overflow-x-auto px-1 pb-5 pt-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:pb-6 sm:pt-4"
         data-testid="products-carousel"
         aria-roledescription="carousel"
         aria-label="Products"
       >
-        {products.map((item, index) => {
-          const active = index === activeIndex;
-          return (
-            <div
-              key={item.id}
-              data-product-slide
-              className="w-[min(88vw,22rem)] shrink-0 snap-start sm:w-[min(48vw,24rem)] lg:w-[calc((100%-3rem)/3)]"
-              aria-current={active ? "true" : undefined}
-            >
-              <HoverCard featured={index === 0 && active} className="h-full">
-                <article
-                  className={`group flex h-full flex-col rounded-[20px] border bg-surface p-5 transition-[border-color,box-shadow] duration-[var(--ease)] sm:p-6 lg:p-7 ${
-                    active
-                      ? "border-electric shadow-[0_12px_0_0_rgba(0,0,0,0.08)]"
-                      : "border-[#D1D1D1] shadow-[0_12px_0_0_rgba(0,0,0,0.04)]"
-                  }`}
-                >
-                  <ProductArt kind={item.art} />
-                  <p className="text-[0.6875rem] font-medium uppercase tracking-[0.08em] text-[#B7B7B7]">
-                    {item.note}
-                  </p>
-                  <h3 className="mt-2 font-serif text-[1.35rem] font-extrabold tracking-tight text-electric sm:text-[1.65rem]">
-                    {item.name}
-                  </h3>
-                  <p className="mt-3 text-sm font-semibold tracking-tight text-[#535353]">
-                    {item.tagline}
-                  </p>
-                  <p className="mt-3 flex-1 text-sm font-medium leading-relaxed tracking-tight text-[#8A8A8A]">
-                    {item.overview}
-                  </p>
-                  <div className="mt-8 flex flex-wrap gap-3">
-                    <PrimaryButton href={item.primary.href}>
-                      {item.primary.label}
-                    </PrimaryButton>
-                    <SecondaryButton href={item.secondary.href}>
-                      {item.secondary.label}
-                    </SecondaryButton>
-                  </div>
-                </article>
-              </HoverCard>
-            </div>
-          );
-        })}
+        <div className="flex snap-x snap-mandatory gap-4 sm:gap-6">
+          {products.map((item, index) => {
+            const active = index === activeIndex;
+            return (
+              <div
+                key={item.id}
+                data-product-slide
+                className="w-[min(88vw,22rem)] shrink-0 snap-start sm:w-[min(48vw,24rem)] lg:w-[calc((100%-3rem)/3)]"
+                aria-current={active ? "true" : undefined}
+              >
+                <HoverCard className="h-full">
+                  <article className="group flex h-full flex-col rounded-[20px] border border-[#D1D1D1] bg-surface p-5 shadow-none transition-[border-color,box-shadow] duration-[var(--ease)] hover:border-electric hover:shadow-[0_12px_0_0_rgba(0,0,0,0.08)] sm:p-6 lg:p-7">
+                    <ProductArt kind={item.art} />
+                    <p className="text-[0.6875rem] font-medium uppercase tracking-[0.08em] text-[#B7B7B7]">
+                      {item.note}
+                    </p>
+                    <h3 className="mt-2 font-serif text-[1.35rem] font-extrabold tracking-tight text-electric sm:text-[1.65rem]">
+                      {item.name}
+                    </h3>
+                    <p className="mt-3 text-sm font-semibold tracking-tight text-[#535353]">
+                      {item.tagline}
+                    </p>
+                    <p className="mt-3 flex-1 text-sm font-medium leading-relaxed tracking-tight text-[#8A8A8A]">
+                      {item.overview}
+                    </p>
+                    <div className="mt-8 flex flex-wrap gap-3">
+                      <PrimaryButton href={item.primary.href}>
+                        {item.primary.label}
+                      </PrimaryButton>
+                      <SecondaryButton href={item.secondary.href}>
+                        {item.secondary.label}
+                      </SecondaryButton>
+                    </div>
+                  </article>
+                </HoverCard>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

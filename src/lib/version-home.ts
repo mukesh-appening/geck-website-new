@@ -9,9 +9,9 @@ export const VERSION_HOME = {
       {
         id: "use-it",
         title: "Use it",
-        subtitle: "Self-Serve",
+        subtitle: "Self Serve",
         lead: "Run your growth on Geck.",
-        body: "Monitor your brand's AI footprint, automate multi-channel content pipelines, or build your GTM strategy independently.",
+        body: "Monitor your brand's AI footprint, automate multi channel content pipelines, or build your GTM strategy independently.",
         cta: { label: "Explore products", href: "/products" },
       },
       {
@@ -19,7 +19,7 @@ export const VERSION_HOME = {
         title: "Do it with us",
         subtitle: "Partnership",
         lead: "Add builders to your team.",
-        body: "Embed our strategists, engineers, and growth operators to overhaul legacy workflows and execute high-stakes launches.",
+        body: "Embed our strategists, engineers, and growth operators to overhaul legacy workflows and execute high stakes launches.",
         cta: { label: "Explore services", href: "/#services" },
       },
       {
@@ -39,17 +39,17 @@ export const VERSION_HOME = {
       {
         id: "ai-transformation",
         title: "AI Transformation",
-        body: "Move past pilot purgatory. Identify high-leverage workflows, build reliable architecture, and actually get your teams using AI where it counts.",
+        body: "Move past pilot purgatory. Identify high leverage workflows, build reliable architecture, and actually get your teams using AI where it counts.",
       },
       {
         id: "ai-marketing",
         title: "AI Marketing & Growth",
-        body: "Stop drowning in generic copy. Modernize research, positioning, multi-channel distribution, and performance tracking into a single loop.",
+        body: "Stop drowning in generic copy. Modernize research, positioning, multi channel distribution, and performance tracking into a single loop.",
       },
       {
         id: "ai-search",
         title: "AI Search & Visibility",
-        body: "Buyers aren't just searching—they're asking LLMs for recommendations. Discover how AI sees your brand, fix the gaps, and become the default choice.",
+        body: "Buyers aren't just searching, they're asking LLMs for recommendations. Discover how AI sees your brand, fix the gaps, and become the default choice.",
       },
       {
         id: "agentic-commerce",
@@ -59,16 +59,16 @@ export const VERSION_HOME = {
       {
         id: "ai-voice-video",
         title: "AI Voice & Video Agents",
-        body: "Deploy custom voice and video systems for customer support, transcription, and real-time interactions built natively into your workflows.",
+        body: "Deploy custom voice and video systems for customer support, transcription, and real time interactions built natively into your workflows.",
       },
     ],
   },
 
   products: {
     eyebrow: "GECK PRODUCTS",
-    headline: "Software built from real-world execution.",
+    headline: "Software built from real world execution.",
     support:
-      "We turn hard-earned operational insights into production-ready software—so your team can move fast without starting from a blank page.",
+      "We turn hard earned operational insights into production ready software, so your team can move fast without starting from a blank page.",
     cta: { label: "Explore the products", href: "/products" },
     items: [
       {
@@ -77,7 +77,7 @@ export const VERSION_HOME = {
         note: "Visibility & Content",
         tagline: "See what AI sees. Fix what it misses. Create what comes next.",
         overview:
-          "Track your brand across AI answer engines and search, then turn visibility gaps into multi-channel content from one workspace.",
+          "Track your brand across AI answer engines and search, then turn visibility gaps into multi channel content from one workspace.",
         art: "growth" as const,
         primary: { label: "Explore Growth", href: "/contact" },
         secondary: { label: "Start free", href: "/contact" },
@@ -88,7 +88,7 @@ export const VERSION_HOME = {
         note: "Voice",
         tagline: "Conversational AI built for production.",
         overview:
-          "Deploy advanced voice and transcription systems designed to handle real-time customer workflows and internal communication.",
+          "Deploy advanced voice and transcription systems designed to handle real time customer workflows and internal communication.",
         art: "voice" as const,
         primary: { label: "Explore Voice", href: "/contact" },
         secondary: { label: "Talk to us", href: "/contact" },
@@ -99,7 +99,7 @@ export const VERSION_HOME = {
         note: "Image & Video Generation",
         tagline: "Generate rich media from your core context.",
         overview:
-          "Produce on-brand images and explanatory video assets natively from your approved product materials and briefs.",
+          "Produce on brand images and explanatory video assets natively from your approved product materials and briefs.",
         art: "vision" as const,
         primary: { label: "Explore Vision", href: "/contact" },
         secondary: { label: "Talk to us", href: "/contact" },
@@ -110,7 +110,7 @@ export const VERSION_HOME = {
         note: "GTM Strategy Engine",
         tagline: "Build a GTM strategy your team can defend.",
         overview:
-          "Take a product idea and turn it into a rigorous, evidence-backed strategy covering positioning, messaging, and prioritized playbooks.",
+          "Take a product idea and turn it into a rigorous, evidence backed strategy covering positioning, messaging, and prioritized playbooks.",
         art: "dross" as const,
         primary: { label: "Explore Dross", href: "/contact" },
         secondary: { label: "Build my strategy", href: "/contact" },
@@ -118,7 +118,7 @@ export const VERSION_HOME = {
       {
         id: "geck-test",
         name: "Test",
-        note: "AI-Enabled Testing",
+        note: "AI Enabled Testing",
         tagline: "Intelligent software testing powered by AI.",
         overview:
           "Automate and scale software testing infrastructure using autonomous agents designed to navigate and validate digital system",
@@ -132,7 +132,7 @@ export const VERSION_HOME = {
   services: {
     headline: "Strategy that actually ships.",
     support:
-      "Real transformation lives in production systems, updated workflows, and measurable revenue—not a PDF.",
+      "Real transformation lives in production systems, updated workflows, and measurable revenue, not a PDF.",
     items: [
       {
         title: "AI Transformation",
@@ -148,7 +148,7 @@ export const VERSION_HOME = {
       },
       {
         title: "Custom AI Products",
-        body: "Domain-specific copilots and bespoke agentic systems.",
+        body: "Domain specific copilots and bespoke agentic systems.",
       },
     ],
     cta: { label: "Explore all services", href: "/contact" },
@@ -175,7 +175,7 @@ export const VERSION_HOME = {
       },
       {
         title: "Improve",
-        body: "Feed real-world performance data straight back into your next decision.",
+        body: "Feed real world performance data straight back into your next decision.",
       },
     ],
   },

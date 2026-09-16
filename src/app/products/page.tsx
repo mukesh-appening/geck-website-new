@@ -42,7 +42,7 @@ export default function ProductsPage() {
       <PageShell
         eyebrow={products.eyebrow}
         title="Software built from"
-        titleAccent="real-world execution."
+        titleAccent="real world execution."
         description={products.support}
         actions={
           <>
@@ -58,18 +58,11 @@ export default function ProductsPage() {
             className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
             slow={false}
           >
-            {products.items.map((product, index) => {
-              const featured = index === 0;
+            {products.items.map((product) => {
               return (
                 <StaggerItem key={product.id} as="li" className="list-none">
-                  <HoverCard featured={featured} className="h-full">
-                    <article
-                      className={`group flex h-full flex-col rounded-[20px] border bg-surface p-5 sm:p-7 ${
-                        featured
-                          ? "border-electric shadow-[0_12px_0_0_rgba(0,0,0,0.08)]"
-                          : "border-[#D1D1D1] shadow-[0_12px_0_0_rgba(0,0,0,0.06)]"
-                      }`}
-                    >
+                  <HoverCard className="h-full">
+                    <article className="group flex h-full flex-col rounded-[20px] border border-[#D1D1D1] bg-surface p-5 shadow-none transition-[border-color,box-shadow] duration-[var(--ease)] hover:border-electric hover:shadow-[0_12px_0_0_rgba(0,0,0,0.08)] sm:p-7">
                       <ProductArt kind={product.art} />
                       <p className="text-[0.6875rem] font-medium uppercase tracking-[0.08em] text-[#B7B7B7]">
                         {product.note}

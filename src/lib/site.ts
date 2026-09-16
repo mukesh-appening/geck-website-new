@@ -59,7 +59,7 @@ export const INDEXABLE_PAGES: SitePage[] = [
     path: "/products",
     title: "Geck Products",
     description:
-      "Software built from real-world execution: Geck Growth, Voice, Vision, DROSS, and Geck Test.",
+      "Software built from real world execution: Geck Growth, Voice, Vision, DROSS, and Geck Test.",
     changeFrequency: "weekly",
     priority: 0.9,
   },

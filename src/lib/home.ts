@@ -1,16 +1,17 @@
 /** Homepage copy — Website Copy Package hero + classic `/v1` sections. */
 
 export const HOME = {
-  eyebrow: "AI TRANSFORM & GROWTH PARTNER",
+  eyebrow: "AI Transformation",
   /** Exact package headline; visual split in HomeHero. */
-  headline: "Turn AI into working systems and measurable growth.",
-  headlineLead: "Turn AI into",
-  headlineSystems: "working systems",
-  headlineTail: "and measurable growth.",
+  headline: "Turn AI into working systems and Measurable Growth.",
+  /** Single black line in the hero lockup. */
+  headlineLead: "Turn AI into working systems",
+  /** Dark connector line. */
+  headlineAnd: "and",
+  /** Display line — M and G capitalized. */
+  headlineGrowth: "Measurable Growth.",
   support:
     "From strategy and engineering to proprietary products, we help you automate work, build native experiences, and scale faster.",
-  microcopy:
-    "Looking for software only? Spin up Geck Growth or map your GTM with DROSS.",
   brandInputPrimary: "Enter your Brand.",
   brandInputSecondary: " Get instant insights",
   primaryCta: { label: "Talk to Geck", href: "/contact" },
@@ -76,7 +77,7 @@ export const HOME = {
     name: "Shivansh Kapoor",
     role: "Head of Growth",
     quote:
-      "Geck for Enterprise has been a game-changer for our marketing teams. It’s helped us work more efficiently, cutting down on manual tasks so we can focus on what really matters, engaging with our audience and driving growth.",
+      "Geck for Enterprise has been a game changer for our marketing teams. It’s helped us work more efficiently, cutting down on manual tasks so we can focus on what really matters, engaging with our audience and driving growth.",
     stat: "125%",
     statLabel: "Increase in Visibility across all major AI Platforms",
     avatar: "/media/avatar-shivansh.jpg",

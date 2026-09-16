@@ -84,7 +84,7 @@ Sticky bar with macOS-style glass on scroll: transparent at page top (hero rings
 
 ## 5. Layout Principles
 
-- **One composition** in the first viewport: GECK brand (logo), package eyebrow (`AI TRANSFORM & GROWTH PARTNER`), package headline as a three-line lockup — soft Jakarta lead `Turn AI into`, then equal Nanum electric display lines `working systems` / `and measurable growth.`, one support sentence, CTA pair, spark microcopy, atmosphere rings. No brand input or partner strip. From `sm` up, sticky header + hero lock to one viewport (`h-dvh` / `max-h-dvh`, overflow clipped). On mobile, hero is content-height with smaller type and looser rhythm.
+- **One composition** in the first viewport: GECK brand (logo), package eyebrow (`AI Transformation`), package headline as a three-line lockup — black Nanum line `Turn AI into working systems`, dark Jakarta `and`, then Nanum electric `Measurable Growth.`, one support sentence, CTA pair, atmosphere rings. No brand input, spark microcopy, or partner strip. From `sm` up, sticky header + hero lock to one viewport (`h-dvh` / `max-h-dvh`, overflow clipped). On mobile, hero is content-height with smaller type and looser rhythm.
 - **One job per section:** one H2, one short support line, then content.
 - Max content width ~72rem for prose blocks; solutions carousel may bleed wider.
 - Vertical rhythm: section padding `4–6rem`.
@@ -94,7 +94,7 @@ Sticky bar with macOS-style glass on scroll: transparent at page top (hero rings
 - Mobile: stack CTAs; preserve single H1; keep fact lists scannable.
 - Motion: carousel scroll (solutions infinite loop via triple-cloned track + silent re-center; auto-advance ~4.2s; pauses on hover/focus / reduced-motion), CTA hover, form submit — ~180ms ease `cubic-bezier(0.22, 1, 0.36, 1)`.
 - **Hero rings:** exactly **two** discs (outer/middle) — larger radii (`~1580` / `~1280`) so arcs clear package headline copy; transparent fill + `#ECECEC` border so lines continue through the sticky header at page top; hard bottom shadow; `ringOuterMove` / `ringMiddleMove`. Bleed under sticky header (`-top` into header band); frost glass only after scroll. Disabled under `prefers-reduced-motion`.
-- **Hero headline:** Three-line lockup — soft lead `Turn AI into`, then matching Nanum ExtraBold electric lines for `working systems` and `and measurable growth.`; word-fade on the final line; respects `prefers-reduced-motion`.
+- **Hero headline:** Three-line lockup — single black Nanum ExtraBold line `Turn AI into working systems`, dark Jakarta `and`, then Nanum ExtraBold electric `Measurable Growth.`; word-fade on the final line; respects `prefers-reduced-motion`.
 - **Interior pages:** Share `PageShell` with home — `PageRail`, chip eyebrow, soft hero rings under sticky header, centered H1 with electric accent, pill CTAs, `#D1D1D1` rounded content panels.
 - **Motion system:** Framer Motion via `src/components/motion/*`. Prefer transform/opacity; respect `prefers-reduced-motion`.
 - **Smooth scroll:** Lenis inertia scrolling site-wide (`SmoothScroll`) + Framer `Reveal` (`fadeUpSoft` blur/slide) on section enter; thin electric `ScrollProgress` bar. Disabled under reduced motion.
@@ -116,7 +116,7 @@ Public live reference: `/typography` (`src/app/typography/page.tsx`). Shows type
 
 ## 8. Homepage & classic route
 
-- **Home (`/`):** `VersionHome` — package hero via `HomeHero` (eyebrow + redesigned headline + CTA pair); below-the-fold IA from Website Copy Package (engage, 5 solutions including Voice & Video Agents, products slider with **3 cards visible** by default, finite scroll only — no infinite loop, services, loop, closing CTA). Engage cards use blue active border/CTA on hover only.
+- **Home (`/`):** `VersionHome` — package hero via `HomeHero` (eyebrow + redesigned headline + CTA pair); below-the-fold IA from Website Copy Package (engage, 5 solutions as a single-column numbered list with large left indices, products slider with **3 cards visible** by default, finite scroll only — no infinite loop, services, loop, closing CTA). Engage cards use blue active border/CTA on hover only.
 - **Products (`/products`):** Expanded lineup (Growth, Voice, Vision, DROSS, Test).
 - **Classic (`/v1`):** Previous homepage (definition, solutions carousel, impact, spotlight).
 - **`/v2`:** Permanent redirect to `/`.

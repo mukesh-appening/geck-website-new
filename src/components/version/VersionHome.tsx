@@ -13,7 +13,6 @@ import { HoverCard } from "@/components/version/HoverCard";
 import { ProductsCarousel } from "@/components/version/ProductsCarousel";
 import {
   SectionOrbits,
-  SolutionMark,
 } from "@/components/version/VersionArt";
 import { VERSION_HOME as C } from "@/lib/version-home";
 
@@ -178,25 +177,27 @@ export function VersionHome() {
           </Reveal>
 
           <Stagger
-            className="mx-auto mt-12 grid max-w-5xl gap-4 sm:mt-16 sm:grid-cols-2 sm:gap-5"
+            className="mx-auto mt-12 flex max-w-4xl flex-col gap-4 sm:mt-16 sm:gap-5"
             slow={false}
           >
             {C.solutions.items.map((item, index) => (
               <StaggerItem key={item.id} as="li" className="list-none">
-                <HoverCard className="h-full">
-                  <article className="group h-full rounded-[20px] border border-[#E8E8E8] bg-white p-6 transition-[border-color,background-color,box-shadow] duration-[var(--ease)] hover:border-electric hover:bg-[rgba(0,111,253,0.03)] hover:shadow-[0_8px_0_0_rgba(0,0,0,0.06)] sm:p-8">
-                    <div className="flex items-start justify-between gap-4">
-                      <SolutionMark index={index} />
-                      <p className="font-mono text-sm font-medium tracking-tight text-electric">
-                        {String(index + 1).padStart(2, "0")}
+                <HoverCard>
+                  <article className="group flex items-start gap-5 rounded-[20px] border border-[#E8E8E8] bg-white px-5 py-7 shadow-[0_8px_0_0_transparent] transition-[border-color,background-color,box-shadow] duration-[var(--ease)] hover:border-electric hover:bg-[rgba(0,111,253,0.03)] hover:shadow-[0_8px_0_0_rgba(0,0,0,0.06)] sm:gap-10 sm:px-7 sm:py-9 md:gap-14">
+                    <p
+                      className="shrink-0 font-serif text-[clamp(2.75rem,7vw,4.75rem)] font-extrabold leading-none tracking-[-0.04em] text-electric tabular-nums"
+                      aria-hidden
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <div className="min-w-0 flex-1 pt-1 sm:pt-2">
+                      <h3 className="font-serif text-[1.35rem] font-extrabold tracking-tight text-[#535353] transition-colors duration-[var(--ease)] group-hover:text-electric sm:text-[1.85rem]">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 max-w-2xl text-sm font-medium leading-relaxed tracking-tight text-[#8A8A8A] sm:mt-3 sm:text-base">
+                        {item.body}
                       </p>
                     </div>
-                    <h3 className="mt-5 font-serif text-[1.4rem] font-extrabold tracking-tight text-[#535353] transition-colors duration-[var(--ease)] group-hover:text-electric sm:text-[1.85rem]">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 text-sm font-medium leading-relaxed tracking-tight text-[#8A8A8A] sm:text-base">
-                      {item.body}
-                    </p>
                   </article>
                 </HoverCard>
               </StaggerItem>
@@ -208,7 +209,7 @@ export function VersionHome() {
       {/* Products */}
       <section
         id="products"
-        className="relative overflow-hidden border-y border-[#EDEDED] bg-[#FAFAFA]"
+        className="relative overflow-x-clip border-y border-[#EDEDED] bg-[#FAFAFA]"
         aria-labelledby="products-heading"
       >
         <SectionOrbits />
@@ -218,7 +219,7 @@ export function VersionHome() {
             <SectionHeading id="products-heading" className="mt-5">
               Software built from{" "}
               <span className="font-semibold text-electric">
-                real-world execution.
+                real world execution.
               </span>
             </SectionHeading>
             <p className="mx-auto mt-4 max-w-2xl text-sm font-medium leading-relaxed tracking-tight text-[#B7B7B7] sm:text-base md:text-lg">
@@ -347,9 +348,12 @@ export function VersionHome() {
                 <div className="relative z-10">
                   <h2
                     id="closing-heading"
-                    className="inline-flex items-center justify-center gap-2.5 font-serif text-[1.75rem] font-extrabold leading-tight tracking-tight text-electric sm:gap-3 sm:text-[clamp(2.25rem,4.5vw,3.25rem)]"
+                    className="font-serif text-[1.75rem] font-extrabold leading-tight tracking-tight text-electric sm:text-[clamp(2.25rem,4.5vw,3.25rem)]"
                   >
-                    <span className="size-2 shrink-0 rounded-full bg-spark" aria-hidden />
+                    <span
+                      className="mr-[0.4em] mb-[0.12em] inline-block size-1.5 shrink-0 rounded-full bg-spark align-middle sm:size-[0.4rem]"
+                      aria-hidden
+                    />
                     {C.closing.headline}
                   </h2>
                   <p className="mx-auto mt-5 max-w-2xl text-sm font-medium leading-relaxed tracking-tight text-[#8A8A8A] sm:mt-6 sm:text-lg">

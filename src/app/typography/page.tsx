@@ -419,7 +419,7 @@ export default function TypographyPage() {
                   content.
                 </li>
                 <li>
-                  Prefer citation-ready facts in SSR HTML; keep critical copy
+                  Prefer citation ready facts in SSR HTML; keep critical copy
                   extractable without JavaScript.
                 </li>
                 <li>
