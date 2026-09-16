@@ -58,14 +58,14 @@ export function HomeHero({
             className="mt-7 flex w-full max-w-5xl flex-col items-center sm:mt-9"
           >
             <motion.span
-              className="whitespace-nowrap font-sans text-[clamp(1.05rem,4.2vw,3.25rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-ink sm:text-[clamp(1.65rem,4.8vw,3.75rem)]"
+              className="whitespace-nowrap text-center font-sans text-[clamp(1.25rem,3.8vw,2.75rem)] font-medium capitalize leading-[1.1] tracking-[-0.02em] text-[#535353]"
               variants={reduce ? undefined : staggerItem}
             >
-              {HOME.headlineLead}
+              Turn <span className="normal-case">AI</span> into working systems
             </motion.span>
 
             <motion.span
-              className="mt-2 flex flex-wrap items-baseline justify-center gap-x-[0.35em] whitespace-nowrap font-serif text-[clamp(1.85rem,6.2vw,4.25rem)] font-extrabold leading-[1.05] tracking-[-0.03em] sm:mt-3"
+              className="mt-2 flex flex-wrap items-baseline justify-center gap-x-[0.35em] whitespace-nowrap font-serif text-[clamp(1.75rem,5.2vw,3.5rem)] font-extrabold leading-[1.1] tracking-[-0.02em] sm:mt-3"
               variants={reduce ? undefined : staggerItem}
             >
               <span className="text-[#535353]">{HOME.headlineAnd}</span>

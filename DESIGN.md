@@ -84,7 +84,7 @@ Sticky bar with macOS-style glass on scroll: transparent at page top (hero rings
 
 ## 5. Layout Principles
 
-- **One composition** in the first viewport: GECK brand (logo), package eyebrow (`AI Transformation and Growth`), package headline as a two-line lockup — Plus Jakarta ExtraBold `Turn AI into working systems`, then Nanum ExtraBold `and Measurable Growth.` (dark `and` + electric growth), one support sentence, CTA pair, atmosphere rings. No brand input, spark microcopy, or partner strip. From `sm` up, sticky header + hero lock to one viewport (`h-dvh` / `max-h-dvh`, overflow clipped). On mobile, hero is content-height with smaller type and looser rhythm.
+- **One composition** in the first viewport: GECK brand (logo), package eyebrow (`AI Transformation and Growth`), package headline as a two-line lockup — Plus Jakarta Medium `#535353` `Turn AI into working systems`, then Nanum ExtraBold `and Measurable Growth.` (dark `and` + electric growth), one support sentence, CTA pair, atmosphere rings. No brand input, spark microcopy, or partner strip. From `sm` up, sticky header + hero lock to one viewport (`h-dvh` / `max-h-dvh`, overflow clipped). On mobile, hero is content-height with smaller type and looser rhythm.
 - **One job per section:** one H2, one short support line, then content.
 - Max content width ~72rem for prose blocks; solutions carousel may bleed wider.
 - Vertical rhythm: section padding `4–6rem`.
@@ -94,7 +94,7 @@ Sticky bar with macOS-style glass on scroll: transparent at page top (hero rings
 - Mobile: stack CTAs; preserve single H1; keep fact lists scannable.
 - Motion: carousel scroll (solutions infinite loop via triple-cloned track + silent re-center; auto-advance ~4.2s; pauses on hover/focus / reduced-motion), CTA hover, form submit — ~180ms ease `cubic-bezier(0.22, 1, 0.36, 1)`.
 - **Hero rings:** exactly **two** discs (outer/middle) — larger radii (`~1580` / `~1280`) so arcs clear package headline copy; transparent fill + `#ECECEC` border so lines continue through the sticky header at page top; hard bottom shadow; `ringOuterMove` / `ringMiddleMove`. Bleed under sticky header (`-top` into header band); frost glass only after scroll. Disabled under `prefers-reduced-motion`.
-- **Hero headline:** Two-line lockup — Plus Jakarta ExtraBold `Turn AI into working systems`, then Nanum Myeongjo ExtraBold `and Measurable Growth.` with dark `and` + electric growth; word-fade on the growth phrase; respects `prefers-reduced-motion`.
+- **Hero headline:** Two-line lockup — Plus Jakarta Medium (`#535353`, `-2%` tracking, 110% leading, capitalize) `Turn AI into working systems` scaled for viewport (not full 96px Figma size), then Nanum Myeongjo ExtraBold `and Measurable Growth.` with dark `and` + electric growth; word-fade on the growth phrase; respects `prefers-reduced-motion`.
 - **Interior pages:** Share `PageShell` with home — `PageRail`, chip eyebrow, soft hero rings under sticky header, centered H1 with electric accent, pill CTAs, `#D1D1D1` rounded content panels.
 - **Motion system:** Framer Motion via `src/components/motion/*`. Prefer transform/opacity; respect `prefers-reduced-motion`.
 - **Smooth scroll:** Lenis inertia scrolling site-wide (`SmoothScroll`) + Framer `Reveal` (`fadeUpSoft` blur/slide) on section enter; thin electric `ScrollProgress` bar. Disabled under reduced motion.
