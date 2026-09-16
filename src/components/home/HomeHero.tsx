@@ -65,7 +65,7 @@ export function HomeHero({
             </motion.span>
 
             <motion.span
-              className="mt-2 flex flex-wrap items-baseline justify-center gap-x-[0.35em] whitespace-nowrap font-sans text-[clamp(1.85rem,6.2vw,4.25rem)] font-extrabold leading-[1.05] tracking-[-0.03em] sm:mt-3"
+              className="mt-2 flex flex-wrap items-baseline justify-center gap-x-[0.35em] whitespace-nowrap font-serif text-[clamp(1.85rem,6.2vw,4.25rem)] font-extrabold leading-[1.05] tracking-[-0.03em] sm:mt-3"
               variants={reduce ? undefined : staggerItem}
             >
               <span className="text-[#535353]">{HOME.headlineAnd}</span>
