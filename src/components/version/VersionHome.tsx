@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import {
   PrimaryButton,
   SecondaryButton,
@@ -183,17 +184,25 @@ export function VersionHome() {
             {C.solutions.items.map((item, index) => (
               <StaggerItem key={item.id} as="li" className="list-none">
                 <HoverCard>
-                  <article className="group flex items-start gap-5 rounded-[20px] border border-[#E8E8E8] bg-white px-5 py-7 shadow-[0_8px_0_0_transparent] transition-[border-color,background-color,box-shadow] duration-[var(--ease)] hover:border-electric hover:bg-[rgba(0,111,253,0.03)] hover:shadow-[0_8px_0_0_rgba(0,0,0,0.06)] sm:gap-10 sm:px-7 sm:py-9 md:gap-14">
-                    <p
-                      className="shrink-0 font-serif text-[clamp(2.75rem,7vw,4.75rem)] font-extrabold leading-none tracking-[-0.04em] text-electric tabular-nums"
-                      aria-hidden
-                    >
-                      {String(index + 1).padStart(2, "0")}
-                    </p>
-                    <div className="min-w-0 flex-1 pt-1 sm:pt-2">
-                      <h3 className="font-serif text-[1.35rem] font-extrabold tracking-tight text-[#535353] transition-colors duration-[var(--ease)] group-hover:text-electric sm:text-[1.85rem]">
-                        {item.title}
-                      </h3>
+                  <article className="group flex items-start gap-4 rounded-[20px] border border-[#E8E8E8] bg-white px-5 py-6 shadow-[0_8px_0_0_transparent] transition-[border-color,background-color,box-shadow] duration-[var(--ease)] hover:border-electric hover:bg-[rgba(0,111,253,0.03)] hover:shadow-[0_8px_0_0_rgba(0,0,0,0.06)] sm:gap-6 sm:px-7 sm:py-8">
+                    <div className="flex size-12 shrink-0 items-center justify-center rounded-[14px] border border-electric/15 bg-[rgba(52,79,254,0.06)] sm:size-14">
+                      <Image
+                        src={item.icon}
+                        alt=""
+                        width={28}
+                        height={28}
+                        className="size-7 object-contain sm:size-8"
+                      />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-start justify-between gap-3">
+                        <h3 className="font-serif text-[1.35rem] font-extrabold tracking-tight text-[#535353] transition-colors duration-[var(--ease)] group-hover:text-electric sm:text-[1.85rem]">
+                          {item.title}
+                        </h3>
+                        <p className="shrink-0 pt-1 font-mono text-xs font-medium tracking-tight text-electric tabular-nums sm:text-sm">
+                          {String(index + 1).padStart(2, "0")}
+                        </p>
+                      </div>
                       <p className="mt-2 max-w-2xl text-sm font-medium leading-relaxed tracking-tight text-[#8A8A8A] sm:mt-3 sm:text-base">
                         {item.body}
                       </p>
@@ -344,11 +353,11 @@ export function VersionHome() {
               <div className="group relative mx-auto max-w-4xl overflow-hidden rounded-[24px] border border-[#D1D1D1] bg-white px-6 py-14 text-center shadow-none transition-[border-color,box-shadow] duration-[var(--ease)] hover:border-electric hover:shadow-[0_14px_0_0_rgba(0,0,0,0.07)] sm:px-12 sm:py-16 lg:rounded-[28px] lg:py-20">
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute -left-16 -top-16 size-56 rounded-full border border-[#ECECEC] bg-white shadow-[0_10px_0_0_rgba(175,175,175,0.08)]"
+                  className="pointer-events-none absolute -left-10 -top-10 size-28 rounded-full border border-[#ECECEC] bg-white shadow-[0_6px_0_0_rgba(175,175,175,0.08)] sm:-left-16 sm:-top-16 sm:size-56 sm:shadow-[0_10px_0_0_rgba(175,175,175,0.08)]"
                 />
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute -bottom-20 -right-10 size-72 rounded-full border border-[#ECECEC] bg-white shadow-[0_10px_0_0_rgba(175,175,175,0.08)]"
+                  className="pointer-events-none absolute -bottom-12 -right-8 size-36 rounded-full border border-[#ECECEC] bg-white shadow-[0_6px_0_0_rgba(175,175,175,0.08)] sm:-bottom-20 sm:-right-10 sm:size-72 sm:shadow-[0_10px_0_0_rgba(175,175,175,0.08)]"
                 />
                 <div className="relative z-10">
                   <h2
