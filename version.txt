@@ -1,0 +1,205 @@
+Here is a UX-optimized, scannable, and punchy version of the homepage copy. It cuts the fluff, structures information around user intent, and ensures a clean balance between professional enterprise trust and startup agility.
+
+---
+
+# **Header & Navigation**
+
+* **Nav Links:** Products | Services | Solutions | Resources | Company
+
+
+* **Actions:** `Sign in` / `Start free` / **`Talk to us`**
+
+
+---
+
+## **1. Hero**
+
+* **Eyebrow:** AI TRANSFORMATION & GROWTH PARTNER
+
+
+* **Headline:** Turn AI into working systems and measurable growth.
+
+
+* **Body:** Skip the endless strategy decks. We combine elite engineering, marketing systems, and proprietary AI products to help you automate work, build native experiences, and win in AI-driven commerce.
+
+
+* **Primary CTA:** `Talk to Geck`
+
+* **Secondary CTA:** `Explore our products`
+
+* **Microcopy:** Looking for software only? Spin up Geck Growth or map your GTM with DROSS.
+
+
+
+---
+
+## **2. Three Ways to Engage**
+
+* **Headline:** One operating model. Three ways to plug in.
+
+
+* **Sub-headline:** Move at your own speed—whether you need self-serve software, expert co-pilots, or custom infrastructure.
+
+
+
+| Use it (Self-Serve) | Do it with us (Partnership) | Build it with us (Custom) |
+| --- | --- | --- |
+| **Run your growth on Geck.** <br>
+
+<br>Monitor your brand's AI footprint, automate multi-channel content pipelines, or build your GTM strategy independently.
+
+ | **Add builders to your team.** <br>
+
+<br>Embed our strategists, engineers, and growth operators to overhaul legacy workflows and execute high-stakes launches.
+
+ | **Build what doesn’t exist.** <br>
+
+<br>We combine reusable Geck components with custom engineering to spin up proprietary workflows, internal apps, and agentic systems.
+
+ |
+| `Explore products`<br> | `Explore services`<br> | `Build with us`<br> |
+
+---
+
+## **3. Solutions by Outcome**
+
+* **Headline:** What problem are we solving next?
+
+
+* **⚙️ AI Transformation**
+* Move past pilot purgatory. Identify high-leverage workflows, build reliable architecture, and actually get your teams using AI where it counts.
+
+
+
+
+* **📈 AI Marketing & Growth**
+* Stop drowning in generic copy. Modernize research, positioning, multi-channel distribution, and performance tracking into a single loop.
+
+
+
+
+* **🔍 AI Search & Visibility**
+* Buyers aren't just searching—they're asking LLMs for recommendations. Discover how AI sees your brand, fix the gaps, and become the default choice.
+
+
+
+
+* **🤖 Agentic Commerce**
+* The next wave of buyers won't be human. Make your catalog, checkout flow, and support stack fully discoverable and transactable by AI agents.
+
+
+
+
+
+---
+
+## **4. Products**
+
+* **Headline:** Software built from the trenches.
+
+
+* **Sub-headline:** We turn the repeatable parts of our transformation work into products so your team can move fast without reinventing the wheel.
+
+
+* **Geck Growth Platform**
+
+* *Tagline:* See what AI sees. Fix what it misses. Create what comes next.
+
+
+* *Overview:* Track your brand across AI answer engines and search. Turn those insights into on-brand content and multi-channel distribution from one workspace.
+
+
+* `Explore Geck Growth` | `Start free`
+
+
+
+
+* **DROSS (GTM Strategy Engine)**
+
+* *Tagline:* Build a GTM strategy your team can defend.
+
+
+* *Overview:* Take a product idea and turn it into a rigorous, evidence-backed strategy covering positioning, messaging, growth loops, and prioritized playbooks.
+
+
+* `Explore DROSS` | `Build my strategy`
+
+
+
+
+
+---
+
+## **5. Services**
+
+* **Headline:** Strategy that actually ships.
+
+
+* **Sub-headline:** Real transformation lives in production systems, updated workflows, and measurable revenue—not a PDF.
+
+
+* **AI Transformation:** Architecture, LLM gateways, governance, and operational automation.
+
+
+* **AI Marketing & Growth:** Modern operating models, content engines, and AEO/GEO optimization.
+
+
+* **GTM Strategy & Execution:** Market research, positioning hierarchies, and launch support.
+
+
+* **Custom AI Products:** Domain-specific copilots and bespoke agentic systems.
+
+
+* **CTA:** `Explore all services`
+
+
+---
+
+## **6. The Geck Loop (How We Work)**
+
+* **Headline:** From strategy to execution to feedback loop.
+
+
+
+1. **Decide:** Ground your moves in real market signals (powered by DROSS).
+
+
+2. **Build:** Architect the workflows or content systems required to execute.
+
+
+3. **Reach:** Push your message across human channels and AI discovery engines (powered by Geck Growth).
+
+
+4. **Measure:** Track movement in visibility, behavior, and revenue.
+
+
+5. **Improve:** Feed real-world performance data straight back into your next decision.
+
+
+
+---
+
+## **7. Closing CTA**
+
+* **Headline:** What are we building or breaking next?
+
+
+* **Body:** Tell us what you're trying to launch, automate, or scale. We’ll help you figure out if you need a software product, a focused sprint, or a custom build.
+
+
+* **Primary CTA:** `Talk to Geck`
+
+* **Secondary CTA:** `Start free`
+
+
+---
+
+### **UX Copywriter's Note on Layout & Visual Support:**
+
+* **Visual 1 (Hero):** A clean, split-screen UI illustration showing a live preview of the Geck Growth dashboard side-by-side with a workflow architecture graph (avoiding generic "AI brain" art).
+
+
+* **Visual 2 (Engagement Modes):** Use a 3-column card layout with distinct micro-illustrations representing *Software (Code icon)*, *Services (People/Team icon)*, and *Custom Build (Lego/Modular blocks)*.
+* **Visual 3 (The Loop):** A horizontal, numbered process diagram showing the 5-step loop to break up text-heavy scrolling.
+
+Would you like to refine the copy for the **Geck Growth product page** or the **Services overview** next?

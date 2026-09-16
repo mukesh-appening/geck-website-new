@@ -43,6 +43,7 @@ export function SiteFooter() {
                 { href: "/contact", label: "Contact" },
                 { href: "/privacy", label: "Privacy" },
                 { href: "/typography", label: "Brand Kit" },
+                { href: "/v2", label: "Version 2" },
                 { href: "/llms.txt", label: "llms.txt" },
               ].map((item) => (
                 <li key={item.href}>

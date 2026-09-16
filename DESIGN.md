@@ -111,7 +111,13 @@ Every indexable page must:
 
 Public live reference: `/typography` (`src/app/typography/page.tsx`). Shows typefaces, type scale, color swatches, buttons, inputs, chips, and surface patterns. Keep that page in sync when tokens or component recipes change.
 
-## 8. Agent Sync Rule
+## 8. Homepage v2 (version.txt)
+
+Preview redesign at `/v2` (`src/components/version/VersionHome.tsx`, copy in `src/lib/version-home.ts`). Same design system as home; new IA from `version.txt`: hero, three engagement modes, solutions by outcome, products, services, Geck Loop, closing CTA.
+
+Premium craft notes: brand mark in hero; featured “Do it with us” + first product with electric border / hard offset; soft `#FAFAFA` products band; dark services band (`#1A1A1E`); numbered loop discs on a hairline rail; closing CTA stage with ring atmosphere and hard shadow. Abstract product wells are decorative (not product claims).
+
+## 9. Agent Sync Rule
 
 When changing visual decisions:
 1. Update **this DESIGN.md** first (or in the same PR).

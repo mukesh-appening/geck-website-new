@@ -86,6 +86,14 @@ export const INDEXABLE_PAGES: SitePage[] = [
     changeFrequency: "monthly",
     priority: 0.4,
   },
+  {
+    path: "/v2",
+    title: "Geck — AI Transform & Growth Partner",
+    description:
+      "Turn AI into working systems and measurable growth with Geck products, services, and custom builds.",
+    changeFrequency: "weekly",
+    priority: 0.85,
+  },
 ];
 
 export function absoluteUrl(path = "/"): string {
